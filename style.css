@@ -11,4 +11,5 @@ html {
 	background-color: #4779FB;
 	display: flex;
 	flex-flow: row nowrap;
+	list-style: none;
 }
