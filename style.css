@@ -9,9 +9,6 @@ html {
 
 .header {
 	background-color: #4779FB;
-}
-
-.header .menu {
 	display: flex;
 	flex-flow: row nowrap;
 }
