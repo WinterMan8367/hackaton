@@ -15,7 +15,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius.</p>
                     <div class="">
                         <form>
-                            <img class="icon" src="..">
+                            <img class="icon" src="img/search.png">
                             <input type="text" name=text" class="intro_search" placeholder="Чем я могу вам помочь?">
                         </form>
                         <input type="submit" name="#" class="" value="Оставить заказ">
