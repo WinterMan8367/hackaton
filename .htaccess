@@ -1,0 +1,4 @@
+#altan rules
+php_flag display_errors On
+php_value error_reporting "E_ALL & ~E_NOTICE"
+php_flag session.use_only_cookies on
