@@ -23,11 +23,11 @@ class MysqlModel
     public $error = "";
     private $connect = false;
 
-    function __construct($server ,$db , $user, $pass){
-        $this->server = $server;
-        $this->db = $db;
-        $this->user = $user;
-        $this->pass = $pass;
+    function __construct(){
+        $this->server = "server125.hosting.reg.ru";
+        $this->db = "u2013553_default";
+        $this->user = "u2013553_default";
+        $this->pass = "6Ietg4cXFO0C20cr";
     }
 
     function getConnect() {

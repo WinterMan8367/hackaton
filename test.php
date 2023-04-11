@@ -11,12 +11,12 @@
 	</head>
 	<body>
 		<?php
-            echo "sus";
+            echo "sus<br>";
             $db = new MysqlModel();
             $db->goResult("SELECT * FROM USERS");
             $arr = $db->goResult("SELECT * FROM USERS");
-            vardump($arr);
-            echo "sus2";
+            var_dump($arr);
+            echo "<br>sus2";
         ?>
 	</body>
 </html>
