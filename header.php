@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>footer</title>
+		<title>header</title>
 		<link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/headerfooter.css">
 	</head>
@@ -23,7 +23,7 @@
                   <a id="registration_link" href="#">Регистрация</a>
                 </div>
                 <div class="login flex">
-                <img class="icon" src="img/user.png">
+                  <img class="icon" src="img/user.png">
                   <a id="login_link" href="#">Войти</a>
                 </div>
               </div>
