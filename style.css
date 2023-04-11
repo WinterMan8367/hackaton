@@ -13,3 +13,11 @@ html {
 	flex-flow: row nowrap;
 	list-style: none;
 }
+
+p {
+	color: red;
+}
+
+.slavik {
+	margin-top: 0px;
+}
