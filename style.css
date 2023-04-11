@@ -14,6 +14,12 @@ html {
 .header .menu {
 	display: flex;
 	flex-flow: row nowrap;
+}
+
 p {
 	color: red;
+}
+
+.slavik {
+	margin-top: 0px;
 }
