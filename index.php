@@ -8,6 +8,9 @@
         <link rel="stylesheet" href="styles/headerfooter.css">
     </head>
     <body>
+        <?php
+            require_once('header.php');
+        ?>
         <div class="container">
             <div class="intro_block">
                 <div class="intro_block_markup block">
