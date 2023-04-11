@@ -5,3 +5,13 @@
 html {
 	font-family: Arial;
 }
+
+
+.header {
+	background-color: #4779FB;
+}
+
+.header .menu {
+	display: flex;
+	flex-flow: row nowrap;
+}
