@@ -6,6 +6,7 @@ html {
 	font-family: Arial;
 }
 
+<<<<<<< HEAD
 
 .header {
 	background-color: #4779FB;
@@ -14,4 +15,8 @@ html {
 .header .menu {
 	display: flex;
 	flex-flow: row nowrap;
+=======
+p {
+	color: red;
+>>>>>>> 37494a0424a10bc29718183cf373cc1f909082e2
 }
