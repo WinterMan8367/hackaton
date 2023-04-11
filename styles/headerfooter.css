@@ -1,0 +1,46 @@
+#header #top_panel {
+  background: var(--main-color);
+  padding: 9px 0px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+#header #top_panel .inner {
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header #top_panel .logo {
+  width: 140px;
+  height: 52px;
+  margin-right: 50px;
+  background: center/cover url(../img/logo.png);
+}
+
+#header #top_panel .left
+,#header #top_panel .right
+,#header #top_panel .registration
+,#header #top_panel .login {
+  align-items: center;
+}
+
+#header #top_panel a {
+  color: white;
+  font-size: 20px;
+  margin-right: 30px;
+  transition: 0.3s ease;
+}
+
+#header #top_panel .left a:not(a.logo):hover
+,#header #top_panel .registration:hover
+,#header #top_panel .login:hover {
+  position: relative;
+  bottom: 3px;
+}
+
+#header #top_panel .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+
