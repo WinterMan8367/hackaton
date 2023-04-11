@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="styles/master.css">
 	</head>
 	<body>
-		
-	<script src="scripts/script.css"></script>
+        <header class="header"></header>
+	    <script src="scripts/script.css"></script>
 	</body>
 </html>
