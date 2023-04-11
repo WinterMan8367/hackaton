@@ -5,4 +5,5 @@
     } else {
         echo "not sus";
     }
+    echo "be";
 ?>
