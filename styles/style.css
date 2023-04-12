@@ -343,8 +343,8 @@ h2.heading {
   display: flex;
 }
 
-.more {
-  font-size: 30px;
+.morg {
+  font-size: 20px;
   color: var(--blue-color);
 }
 .tag_list {
@@ -364,11 +364,17 @@ h2.heading {
 
 #bottom_markup_photo {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
 }
 
+#bottom_markup_outo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 #bottom_markup {
   display: flex;
   flex-direction: column;
