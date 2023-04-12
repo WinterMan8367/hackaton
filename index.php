@@ -34,7 +34,7 @@
         </div>
 
         <?php
-            require_once('header.php');
+            require_once('footer.php');
         ?>
 	    <script src="scripts/script.css"></script>
 	</body>
