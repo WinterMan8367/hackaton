@@ -223,4 +223,36 @@
         return $arr;
     }
 
+    function getReviews($userId)
+    {
+        $arr = [];
+        $db = new MysqlModel();
+
+        $arr['user'] = $db->goResult("
+            SELECT
+                *,
+            (
+            SELECT
+                id
+            FROM
+                USERS_REVIEWS
+            WHERE
+                id = reviewsId
+            ) review
+            FROM
+                USERS_REVIEWS_CONN_RECIPIENT
+            WHERE
+                userId = $userId;
+        ");
+
+        $arr['review'] = $db->goResult("
+            SELECT
+                *
+            FROM
+                USERS_REVIEWS
+        ");
+
+        return $arr;
+    }
+
 ?>

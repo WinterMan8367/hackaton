@@ -32,7 +32,7 @@
             echo test($arr);
             echo "<hr>";
 
-            $arr = getOrderInfo(1);
+            $arr = getReviews(1);
             echo test($arr);
         ?>
 	</body>
