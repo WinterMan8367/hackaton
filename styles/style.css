@@ -224,3 +224,34 @@ h2.heading {
   display: flex;
   align-items: center;
 }
+
+/* ----------- Категории ----------- */
+.category_block {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Стиль тега категории */
+.tag_category {
+  font-size: 16px;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+  margin: 0 10px;
+}
+
+
+.o {
+  max-height: 1270px;
+  min-height: 400px;
+  width: 100%;
+  border-radius: 16px;
+  background-color: var(--white-color);
+  box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
