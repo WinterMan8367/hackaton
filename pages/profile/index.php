@@ -18,6 +18,7 @@
           <div class="left">
             <div>
               <img class="profile_avatar" src="#">
+              <button  class="button one" href="#">Написать сообщение</button>
               <button  class="button" href="#">Редактировать профиль</button>
             </div>
           </div>
@@ -157,7 +158,7 @@
                     100000 - 150000 Руб
                   </h3>
                   <button class="block button one">Посмотреть</button>
-                  <button class="block button two">Отказаться</button>
+                  <button class="block button two">Изменить</button>
                 </div>
               </div>
               <!-- Конец -->
@@ -188,11 +189,51 @@
                     100000 - 150000 Руб
                   </h3>
                   <button class="block button one">Посмотреть</button>
-                  <button class="block button two">Отказаться</button>
+                  <button class="block button two">Откликнуться</button>
                 </div>
               </div>
               <!-- Конец -->
             </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="module_6">
+      <div class="container">
+        <div class="inner">
+          <h2 class="heading">
+            Отзывы
+          </h2>
+          <div class="content">
+            <!-- Start -->
+            <div class="comm flex">
+                <div class="left">
+                  <div class="avatar_user" style="background: center/cover url('')">
+                  </div>
+                  <div class="status" style="background: #A2CF42">Доволен</div>
+                </div>
+                <div class="right flex">
+                  <div class="top flex">
+                    <div class="left">
+                      <h3 class="suka_bliad">Иванов Иван Иванович</h3>
+                    </div>
+                    <div class="right">
+                      <div class="reyting flex">
+                        <img src='img/star.png'>
+                        <img src='img/starempty.png'>
+                        <img src='img/starempty.png'>
+                        <img src='img/starempty.png'>
+                        <img src='img/starempty.png'>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bottom">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius. Dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum...</p>
+                  </div>
+                </div>
+            </div>
+            <!-- End -->
+          </div>
         </div>
       </div>
     </section>

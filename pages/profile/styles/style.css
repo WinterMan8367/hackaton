@@ -57,7 +57,7 @@ a {
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
 }
 
-#module_1 .profile_avatar+.button {
+#module_1 div > .button {
   width: 390px;
   padding: 16px 0px;
   color: white;
@@ -65,10 +65,17 @@ a {
   background: var(--main-color);
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
+  margin-bottom: 10px;
   border: none;
 } 
 
-#module_1 .profile_avatar+.button:hover {
+#module_1 .profile_avatar+.button.one {
+  background: none;
+  border: 2px solid #4779FB;
+  color: #4779FB;
+}
+
+#module_1 div > button:hover {
   scale: 0.98;
   box-shadow: none;
 }
@@ -340,5 +347,64 @@ a {
   background: none;
 }
 
+#module_6 {
+  margin-bottom: 60px;
+}
+
+#module_6 .comm {
+  background: #f0f0f0;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+  max-width: 100%;
+  border-radius: 16px;
+  padding: 12px 20px;
+  margin: 15px 0px;
+}
+
+#module_6 .comm>.left {
+  text-align: center;
+  margin-right: 30px;
+  align-items: center;
+}
+
+#module_6 .comm>.right {
+  flex-direction: column;
+  justify-content: center;
+}
+
+#module_6 .avatar_user {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+}
+
+#module_6 .status {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 2px 16px;
+  border-radius: 2px;
+  color: white;
+}
+
+#module_6 .comm>.right .top {
+  justify-content: space-between;
+  align-items: center;
+}
+
+#module_6 .comm>.right .top img {
+  width: 24px;
+  height: 24px;
+  margin-right: 3px;
+}
+
+#module_6 .suka_bliad {
+  margin-bottom: 10px;
+}
+
+#module_6 .bottom p {
+  font-size: 14px;
+  font-weight: 500;
+  width: 1000px;
+}
 
 
