@@ -48,7 +48,15 @@
               </div>
             </a>
             <div class="tags flex">
-              <p class="tag" style=" color: #FF6060; background: #FFD3BA;">#Дизайнер</p> <!--Теги с БД Цвет выбирай сам) Можно в бд занести-->
+              <?php
+                $arr = getUserCategories(1);
+                foreach ($arr as $elem)
+                {
+                  echo "<p class='tag' style='color: #FF6060; background: #FFD3BA;'>#";
+                  echo $elem["categoryName"];
+                  echo "</p>";
+                }
+              ?>
             </div>
             <p class="description">
             <?php
@@ -76,23 +84,25 @@
                 <a href="#">Добавить</a> <!--Типа добавить элемент портфолио, макет его свёрстан, только файлы добавить)-->
               </div>
             </div>
-            <div class="content">
+            <div class="content flex">
+              <!-- Хуйня, которая элемент порфтолио, макет -->
               <div class="portfolio_item">
-                <img src="#" alt="">
-                <h3>Сайт кондитерской</h3>
-                <p class="description">Нахуй я тут есть АААААА!</p>
+                <img class="card" src="#" alt="">
+                <a href=""><h3 id="head_lol">Сайт кондитерской</h3></a> <!--тоже по БД прогнать-->
+                <p class="description">Нахуй я тут есть ААА!!! PRess FFF</p> <!--Описание, а тут и так всё ясно, если нет, то 50R мне на кату и я расскажу ))))) Шутка от мишутки-->
                 <div class="tools flex">
-                  <img src="img/settings.png" alt="" class="left">
-                  <img src="img/trash.png" alt="" class="right">
+                  <a class="block" href=""><img src="img/settings.png" alt="" class="left"></a>
+                  <a class="block" href=""><img src="img/trash.png" alt="" class="right"></a>
                 </div>
               </div>
+              <!-- Конец хуйни -->
             </div>
           </div>
         </div>
       </div>
     </section>
-    <div style="height:100vh;"></div>
   </main>
+  <script src="scripts/scripts.js"></script>
   <?php
     require_once('../../php/footer.php');
   ?>

@@ -23,8 +23,6 @@
 
         $arr = $db->goResult("
             SELECT 
-                freelancerId, 
-                categoryId,
                 (SELECT NAME FROM CATEGORY WHERE ID = categoryId) categoryName
             FROM FREELANCERS_CONN_CATEGORIES
             WHERE freelancerId = $userId
