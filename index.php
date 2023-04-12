@@ -186,24 +186,36 @@
             <div class="container block_about_us">
                 <div class="markup_about_us_video">
                     <div class="video_block">
-                        <div>
+                        <div class="flex" style="width: 100%; justify-content: space-between;">
                             <h1>Видео</h1>
-                            <img src="" alt="Заебали вы меня">
+                            <img src="../img/lanse_img_video.png" alt="Заебали вы меня">
                         </div>
-                        <div class="">Говно видео</div>
-                    </div class="video_block">
+                        <div class="video">Говно видео</div>
+                    </div>
                 </div>
                 <div class="markup_about_us_text">
                     <h1>О нашей компании</h1>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. 
-
+                    </p><br>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc.
+                    </p><br>
+                    <p>
                         Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius.
-
+                    </p><br>
+                    <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius.
                     </p>
                 </div>
+            </div>
+
+            <div class="container">
+                <div>
+                    <h1>Часто задаваемые вопросы</h1>
+                    <span id="line"></span>
+                </div>
+                <div></div>
             </div>
         </main>
         <div style="height: 100vh;"></div>
