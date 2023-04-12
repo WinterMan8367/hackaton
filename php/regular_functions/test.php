@@ -23,8 +23,8 @@
             echo "<br><br>";
 
             echo "<center><h1>Тест функций</h1></center><br>";
-            $arr = getUserCategories(1);
-            var_dump($arr);
+            $arr = getPortfolio(1);
+            print_r($arr);
             echo "<br><br><center><h1>Тест кода</h1></center><br>";
 
             $arr = getUserCategories(1);

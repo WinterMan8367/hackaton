@@ -6,6 +6,7 @@
 		<title>header</title>
 		<link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="styles/headerfooter.css">
+        <link rel="stylesheet" href="pages/profile/styles/style.css">
         <?php
             require_once('php/regular_functions/functions.php');
         ?>
@@ -122,15 +123,40 @@
                             </form>
                         </div>
 
-                        <div class="flex">
-                            <p>Сортировка по:</p>
+                        <div div class="flex" style="align-items: center;">
+                            <p id="right_indent_search_by">Сортировка по:</p>
                             <select class="sort_by_rating">
                                 <option>Рейтингу</option>
                                 <option>По убыванию</option>
                                 <option>По возрастанию</option>
                             </select>
                         </div>
+                    </div>
+                    
+                    <!-- Линия -->
+                    <span id="line"></span>
 
+                    <div class="list_freelancers_scrolling">
+                        <div class="freelancer_card_search">
+                            <div id="bottom_markup_photo">
+                                <div class="photo_freelancers">
+                                    <img src="../img/user_photo.png" >
+                                </div>
+                            </div>
+                            <div id="bottom_markup">
+                                <h1>Коваленко Михаил Алексеевич</h1><!-- Здесь ФИО из БД -->
+                                <p class="tag_list" style="color: #FF6060; background: #FFD3BA;">#Дизайнер</p> <!-- Здесь Тег из БД -->
+
+                                <a class="city_list_freelancers">г. Москва</a>
+
+
+                                <p class="description_card">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus variusLorem ipsum dolor sit amet, consectetur adipiscing elit...</p> <!-- Здесь инфа из БД -->
+                            </div>
+                            <div id="bottom_markup_photo">
+                                <input type="submit" name="#" class="button_blue" id="button_indent"value="Оставить заказ">
+                                <input type="submit" name="#" class="button_white" value="Найти заказ">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
