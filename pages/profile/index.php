@@ -157,7 +157,7 @@
                     100000 - 150000 Руб
                   </h3>
                   <button class="block button one">Посмотреть</button>
-                  <button class="block button two">Отказаться</button>
+                  <button class="block button two">Изменить</button>
                 </div>
               </div>
               <!-- Конец -->
@@ -188,7 +188,7 @@
                     100000 - 150000 Руб
                   </h3>
                   <button class="block button one">Посмотреть</button>
-                  <button class="block button two">Отказаться</button>
+                  <button class="block button two">Откликнуться</button>
                 </div>
               </div>
               <!-- Конец -->
