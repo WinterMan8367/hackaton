@@ -33,4 +33,35 @@
         return $arr;
     }
 
+    function getFreelancerRating($userId)
+    {
+        $arr = [];
+        $db = new MysqlModel();
+
+        $arr = $db->goResult("
+            SELECT 
+                generalRating
+            FROM FREELANCERS
+            WHERE id = $userId
+        ");
+
+        return $arr;
+    }
+
+
+    function getEmployerRating($userId)
+    {
+        $arr = [];
+        $db = new MysqlModel();
+
+        $arr = $db->goResult("
+            SELECT 
+                generalRating
+            FROM EMPLOYERS
+            WHERE id = $userId
+        ");
+
+        return $arr;
+    }
+
 ?>

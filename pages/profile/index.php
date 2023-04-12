@@ -6,6 +6,7 @@
   <title>Profile</title>
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="../../styles/headerfooter.css">
+  <?php require_once('../../functions.php') ?>
 </head>
 <body>
   <?php require_once('../../header.php') ?>
@@ -20,16 +21,35 @@
             </div>
           </div>
           <div class="right">
-            <h1 id="name">Эдуард Антон Васильевич<!--Имя чела с БД--></h1>
+            <h1 id="name">
+              <?php
+                $arr = getUserInfo(1);
+                echo "$arr[lastname] $arr[firstname] $arr[surname]";
+              ?>
+            </h1>
             <div class="reyting_name">
-              <img src="img/star.png"> <!--Звёздочки копируются в зависимости от рейтинга в БД-->
+              <?php
+                $arr = getFreelancerRating(1);
+                for ($i = 0; $i < round($arr[0]["generalRating"]); $i++)
+                {
+                  echo "<img src='img/star.png'>";
+                }
+              ?>
             </div>
             <a id="place" class="flex" href="#">
               <img src="img/map-tag.png" class="icon">
-              <div>ававыаыв</div><!--Название города-->
+              <div>
+                <?php
+                  $arr = getUserInfo(1);
+                  echo "$arr[address]";
+                ?>
+              </div>
             </a>
             <p class="description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed.  Laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. 
+            <?php
+                  $arr = getUserInfo(1);
+                  echo "$arr[aboutUser]";
+                ?>
             </p>
             <div class="bottom flex">
               <div class="status">Онлайн<!--Онлайн/Офлайн--></div>
