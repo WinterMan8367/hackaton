@@ -88,8 +88,8 @@
               <!-- Хуйня, которая элемент порфтолио, макет -->
               <div class="portfolio_item">
                 <img class="card" src="#" alt="">
-                <a href=""><h3 id="head_lol">Сайт кондитерской</h3></a> <!--тоже по БД прогнать-->
-                <p class="description">Нахуй я тут есть ААА!!! PRess FFF</p> <!--Описание, а тут и так всё ясно, если нет, то 50R мне на кату и я расскажу ))))) Шутка от мишутки-->
+                <a href=""><h3 id="head_lol">Сайт кондитерской</h3></a>
+                <p class="description">Нахуй я тут есть ААА!!! PRess FFF</p>
                 <div class="tools flex">
                   <a class="block" href=""><img src="img/settings.png" alt="" class="left"></a>
                   <a class="block" href=""><img src="img/trash.png" alt="" class="right"></a>
