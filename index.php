@@ -49,8 +49,9 @@
                             <p>Предложите заказ</p>
                         </div>
                     </div>
-
+                    <!-- Стрелка -->
                     <div class="arrow"><img src="../img/arrow-right.png"></div>
+
                     <!-- Второй блок -->
                     <div class="stage_block">
                         <img width="80px" height="64px" src="../img/stage_two_img.png">
@@ -62,6 +63,8 @@
                             <p>Предлагайте свои услуги</p>
                         </div>
                     </div>
+                    <!-- Стрелка -->
+                    <div class="arrow"><img src="../img/arrow-right.png"></div>
 
                     <!-- Третий блок -->
                     <div class="stage_block">
@@ -74,6 +77,8 @@
                             <p>Договаривайтесь с исполнителем</p>
                         </div>
                     </div>
+                    <!-- Стрелка -->
+                    <div class="arrow"><img src="../img/arrow-right.png"></div>
 
                     <!-- Четвёртый блок -->
                     <div class="stage_block">
