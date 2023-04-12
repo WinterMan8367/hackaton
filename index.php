@@ -35,8 +35,8 @@
             </div>
 
 
-            <!-- -->
-            <div class="container">
+            <!-- Сценарный блок -->
+            <div class="container stage">
                 <div class="flex">
                     <!-- Первый блок -->
                     <div class="stage_block">
@@ -57,7 +57,7 @@
                         <img width="80px" height="64px" src="../img/stage_two_img.png">
                         <div id="markup_stage">
                             <div class="flex">
-                                <img src="../img/stage_one.png">
+                                <img src="../img/stage_two.png">
                                 <h1 id="stage_h1_color">Специалист</h1>
                             </div>
                             <p>Предлагайте свои услуги</p>
@@ -71,7 +71,7 @@
                         <img width="80px" height="69px" src="../img/stage_three_img.png">
                         <div id="markup_stage">
                             <div class="flex">
-                                <img src="../img/stage_one.png">
+                                <img src="../img/stage_three.png">
                                 <h1 id="stage_h1_color">Договор</h1>
                             </div>
                             <p>Договаривайтесь с исполнителем</p>
@@ -85,7 +85,7 @@
                         <img width="80px" height="69px" src="../img/stage_four_img.png">
                         <div id="markup_stage">
                             <div class="flex">
-                                <img src="../img/stage_one.png">
+                                <img src="../img/stage_four.png">
                                 <h1 id="stage_h1_color">Готово!</h1>
                             </div>
                             <p>Получите готовую работу</p>
@@ -93,6 +93,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Блок -->
         </main>
         <div style="height: 100vh;"></div>
 
