@@ -1,3 +1,8 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
 <!DOCTYPE html>
 <html lang="ru_RU">
 <head>
@@ -87,15 +92,30 @@
             </div>
             <div class="content flex">
               <!-- Хуйня, которая элемент порфтолио, макет -->
-              <div class="portfolio_item">
-                <img class="card1" src="#" alt="">
-                <a href=""><h3 id="head_lol">Сайт кондитерской</h3></a> <!--тоже по БД прогнать-->
-                <p class="description">Нахуй я тут есть ААА!!! PRess FFF</p> <!--Описание, а тут и так всё ясно, если нет, то 50R мне на кату и я расскажу ))))) Шутка от мишутки-->
-                <div class="tools flex">
-                  <a class="block" href=""><img src="img/settings.png" alt="" class="left"></a>
-                  <a class="block" href=""><img src="img/trash.png" alt="" class="right"></a>
-                </div>
-              </div>
+                <?php
+                  $arr = getPortfolio(1);
+                  foreach ($arr as $key => $value)
+                  {
+                    echo "<div class='portfolio_item'>";
+                    foreach ($value['files'] as $k => $v)
+                    {
+                      echo "<img class='card1' src='", $v['filepath'], $v['filename'], $v['extension'], "' alt=''>";
+                    }    
+                    echo "<a href=''><h3 id='head_lol'>";
+                    echo $value['title'];
+                    echo "</h3></a>";
+                    echo "<p class='description'>";
+                    echo $value['description'];
+                    echo "</p>";
+                    echo "
+                      <div class='tools flex'>
+                        <a class='block' href=''><img src='img/settings.png' alt='' class='left'></a>
+                        <a class='block' href=''><img src='img/trash.png' alt='' class='right'></a>
+                      </div>
+                    </div>
+                    ";
+                  }
+                ?>
               <!-- Конец хуйни -->
             </div>
           </div>
@@ -116,19 +136,26 @@
             </div>
             <div class="content flex">
               <!-- Начало карточки-->
-              <div class="card flex">
-                <div class="left flex">
-                  <h3 class="suka_bliad">Убить Зеленского во благо РОССИИИИИИИИИИИ!!!!!!!</h3>
-                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed.  Laoreet odio dignissim sed. Donec ut vestibulum nisiorbi tincidunt dui diam, at sollicitudin mi consequat at. . Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed...</p>
-                </div>
-                <div class="right flex">
-                  <h3 class="price">
-                    100000 - 150000 Руб
-                  </h3>
-                  <button class="block button one">Посмотреть</button>
-                  <button class="block button two">Отказаться</button>
-                </div>
-              </div>
+              <?php
+                $arr = getOrderInfoForFreelancer(1);
+                foreach ($arr as $key => $value)
+                {
+                  foreach ($value['orders'] as $k => $v)
+                  {
+                    echo "<div class='card flex'>
+                    <div class='left flex'>";
+                    echo "<h3 class='suka_bliad'>", $v['title'], "</h3>";
+                    echo "<p class='description'>", $v['description'], "</p>";
+                    echo "</div>
+                    <div class='right flex'>";
+                    echo "<h3 class='price'>", $v['priceFrom'], "₽ - ", $v['priceBefore'], "₽</h3>";
+                    echo "<button class='block button one'>Посмотреть</button>
+                    <button class='block button two'>Отказаться</button>
+                    </div>
+                    </div>";
+                  }
+                }
+              ?>
               <!-- Конец -->
             </div>
         </div>
@@ -148,7 +175,7 @@
             </div>
             <div class="content flex">
               <!-- Начало карточки-->
-              <div class="card flex">
+              <!-- <div class="card flex">
                 <div class="left flex">
                   <h3 class="suka_bliad">Убить Зеленского во благо РОССИИИИИИИИИИИ!!!!!!!</h3>
                   <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed.  Laoreet odio dignissim sed. Donec ut vestibulum nisiorbi tincidunt dui diam, at sollicitudin mi consequat at. . Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed...</p>
@@ -160,7 +187,24 @@
                   <button class="block button one">Посмотреть</button>
                   <button class="block button two">Изменить</button>
                 </div>
-              </div>
+              </div> -->
+              <?php
+                $arr = getOrderInfo(1);
+                foreach ($arr as $elem)
+                {
+                  echo "<div class='card flex'>
+                  <div class='left flex'>";
+                  echo "<h3 class='suka_bliad'>", $elem['title'], "</h3>";
+                  echo "<p class='description'>", $elem['description'], "</p>";
+                  echo "</div>
+                  <div class='right flex'>";
+                  echo "<h3 class='price'>", $elem['priceFrom'], "₽ - ", $elem['priceBefore'], "₽</h3>";
+                  echo "<button class='block button one'>Посмотреть</button>
+                  <button class='block button two'>Отказаться</button>
+                  </div>
+                  </div>";
+                }
+              ?>
               <!-- Конец -->
             </div>
         </div>
@@ -179,19 +223,23 @@
             </div>
             <div class="content flex">
               <!-- Начало карточки-->
-              <div class="card flex">
-                <div class="left flex">
-                  <h3 class="suka_bliad">Убить Зеленского во благо РОССИИИИИИИИИИИ!!!!!!!</h3>
-                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed.  Laoreet odio dignissim sed. Donec ut vestibulum nisiorbi tincidunt dui diam, at sollicitudin mi consequat at. . Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed...</p>
-                </div>
-                <div class="right flex">
-                  <h3 class="price">
-                    100000 - 150000 Руб
-                  </h3>
-                  <button class="block button one">Посмотреть</button>
-                  <button class="block button two">Откликнуться</button>
-                </div>
-              </div>
+              <?php
+                $arr = getOrderInfo(1);
+                foreach ($arr as $elem)
+                {
+                  echo "<div class='card flex'>
+                  <div class='left flex'>";
+                  echo "<h3 class='suka_bliad'>", $elem['title'], "</h3>";
+                  echo "<p class='description'>", $elem['description'], "</p>";
+                  echo "</div>
+                  <div class='right flex'>";
+                  echo "<h3 class='price'>", $elem['priceFrom'], "₽ - ", $elem['priceBefore'], "₽</h3>";
+                  echo "<button class='block button one'>Посмотреть</button>
+                  <button class='block button two'>Отказаться</button>
+                  </div>
+                  </div>";
+                }
+              ?>
               <!-- Конец -->
             </div>
         </div>

@@ -29,46 +29,11 @@
             echo "<br><br><center><h1>Тест кода</h1></center><br>";
 
             $arr = getPortfolio(1);
-            var_dump($arr);
-            echo "<br><hr>";
-            foreach ($arr as $elem)
-            {
-                print_r($elem);
-                echo "<br><br>";
-            }
+            echo test($arr);
             echo "<hr>";
-            $arr = getPortfolio(1);
-            foreach ($arr as $elem)
-            {
-                foreach ($elem as $key => $value)
-                {   
-                    if ($key == 'title') {
-                        echo "<a href='#'><h3>";
-                        echo $value;
-                        echo "</h3></a>";
-                    }
-                    elseif ($key == 'description')
-                    {
-                        echo "<p>";
-                        echo $value;
-                        echo "</p>";
-                    }
-                    elseif ($key is array)
-                    {
-                        foreach ($key as $doublekey => $triplelem)
-                        {
-                            // перебор элементов массива
-                        }
-                    }
-                }
-            }
 
-            
+            $arr = getOrderInfo(1);
+            echo test($arr);
         ?>
-            <hr>
-             <div>
-                <a href="#"><h3>Сайт кондитерской</h3></a>
-                <p>Нахуй я тут есть ААА!!! PRess FFF</p>
-              </div>
 	</body>
 </html>
