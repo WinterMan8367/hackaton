@@ -75,6 +75,11 @@
   margin-right: 5px;
 }
 
+#footer .left
+,#footer .center {
+  margin-top: 25px;
+}
+
 #footer .left .social {
   margin-top: 40px;
   gap: 15px;
