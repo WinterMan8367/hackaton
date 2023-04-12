@@ -101,7 +101,6 @@
         </div>
       </div>
     </section>
-    <div style="height:100vh;"></div>
   </main>
   <script src="scripts/scripts.js"></script>
   <?php
