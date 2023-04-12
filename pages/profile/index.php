@@ -6,11 +6,11 @@
   <title>Profile</title>
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="../../styles/headerfooter.css">
-  <?php require_once('../../functions.php') ?>
   <link rel="stylesheet" href="../../styles/style.css">
+  <?php require_once('../../php/regular_functions/functions.php') ?>
 </head>
 <body>
-  <?php require_once('../../header.php') ?>
+  <?php require_once('../../php/header.php') ?>
   <main id="main">
     <section id="module_1">
       <div class="container">
@@ -94,7 +94,7 @@
     <div style="height:100vh;"></div>
   </main>
   <?php
-    require_once('../../footer.php');
+    require_once('../../php/footer.php');
   ?>
 </body>
 </html>
