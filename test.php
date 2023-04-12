@@ -21,7 +21,7 @@
             $arr = getUserInfo(1);
             var_dump($arr);
             echo "<br><br>";
-            $arr = getUserCategories(1);
+            $arr = getFreelancerRating(1);
             var_dump($arr);
         ?>
 	</body>
