@@ -14,8 +14,8 @@
                   <img class='icon' src='img/user_add.png'>
                   <a id='registration_link' href='#'>Регистрация</a>
                 </div>
-                <div class='login flex'>
-                <img class='icon' src='img/user.png'>
+                <div onclick="$.fancybox('#login')" class='login flex'>
+                  <img class='icon' src='img/user.png'>
                   <a id='login_link' href='#'>Войти</a>
                 </div>
               </div>

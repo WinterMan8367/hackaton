@@ -33,7 +33,47 @@
                 </div>
             </form>
 
-            <form action="" method="POST" id="login">
+            <form action="" method="POST" id="login" class="windows">
+                <h1>Войти</h1>
+                <input id="login_pole" type="text" placeholder="Логин">
+                <input id="password_login" type="text" placeholder="Пароль">
+                <input type="submit" class="submit" value="Войти">
+                <div onclick="$.fancybox('#zabil_parol')" class="link">Забыли пароль?</div>
+                <div onclick="$.fancybox('#registration_form')" class="link">Зарегистрироваться</div>
+            </form>
+
+            <form action="" method="POST" id="zabil_parol" class="windows">
+                <h1>Восстановление доступа</h1>
+                <input id="login_pole" type="text" placeholder="Введите свой e-mail">
+                <input type="submit" class="submit" value="Продолжить">
+                <p class="context">На почту будет отправлено письмо с ссылкой на восстановление</p>
+                <div onclick="$.fancybox('#login')" class="link">Войти</div>
+            </form>
+
+            <form action="" method="POST" id="work_in_portfolio" class="windows">
+                <h1>Добавить работу</h1>
+                <div style="display: flex;">
+                    <input id="file1" type="file" accept="image/jpeg" value="Загрузить картинку">
+                    <input id="file2" type="file" accept="video/*" value="Загрузить видео">
+                </div>
+                <input type="text" id="name_work" placeholder="Придумайте название своей работы">
+                <input type="text" id="description_work" placeholder="Краткое описание">
+                <input type="submit" class="submit" value="Добавить">
+            </form>
+
+            <!-- <form action="" method="POST" id="info_o_sebe" class="windows">
+                <h1>Добавить работу</h1>
+                <input type="text" id="city" placeholder="Ваш город" value="">
+                <input type="text" id="description_info" placeholder="Опишите себя" value="">
+                <input type="submit" class="submit" value="Добавить">
+            </form> -->
+
+            <form action="" method="POST" id="sdelat_zakaz" class="windows">
+                <h1>Создание заказа</h1>
+                <input type="text" id="name_zakaz" placeholder="Заголовок вашего заказа">
+                <input type="text" id="name_zakaz" placeholder="Подробно опишите свою задачу">
+                <input id="file3" type="file" accept="*" value="Прикрепите ФАЙЛЫ">
+                <input type="text" id="price_zakaz" placeholder="Введите сумму от и до в формате A-B">
                 
             </form>
         </div>
@@ -47,7 +87,7 @@
             <div class="container intro">
                 <div class="intro_block">
                     <div class="intro_block_markup">
-                        <h1>Работай с лучшими специалистами</h1>
+                        <h1 onclick="$.fancybox('#info_o_sebe')">Работай с лучшими специалистами</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius.</p>
                         <div class="intro_search_container">
                             <form id="form_intro">
