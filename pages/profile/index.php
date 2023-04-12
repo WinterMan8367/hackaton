@@ -92,14 +92,6 @@ error_reporting(E_ALL);
             </div>
             <div class="content flex">
               <!-- Хуйня, которая элемент порфтолио, макет -->
-              <!-- <div class='portfolio_item'>
-                <img class="card1" src="#" alt="">
-                <a href=""><h3 id="head_lol">Сайт кондитерской</h3></a>
-                <p class="description">Нахуй я тут есть ААА!!! PRess FFF</p>
-                <div class="tools flex">
-                  <a class="block" href=""><img src="img/settings.png" alt="" class="left"></a>
-                  <a class="block" href=""><img src="img/trash.png" alt="" class="right"></a>
-                </div> -->
                 <?php
                   $arr = getPortfolio(1);
                   foreach ($arr as $key => $value) {
@@ -122,7 +114,6 @@ error_reporting(E_ALL);
                     ";
                   }
                 ?>
-              <!-- </div> -->
               <!-- Конец хуйни -->
             </div>
           </div>
@@ -157,6 +148,9 @@ error_reporting(E_ALL);
                 </div>
               </div>
               <!-- Конец -->
+              <?php
+
+              ?>
             </div>
         </div>
       </div>
