@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+<?php
+    require_once('../../header.php');
+  ?>
   <main id="main">
     <section id="module_1">
       <div class="container">
@@ -36,7 +39,7 @@
     </section>
   </main>
   <?php
-            require_once('footer.php');
+    require_once('../../footer.php');
   ?>
 </body>
 </html>
