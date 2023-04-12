@@ -39,6 +39,7 @@
         </div>
       </div>
     </section>
+    <div style="height:100vh;"></div>
   </main>
   <?php
     require_once('../../footer.php');

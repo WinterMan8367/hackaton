@@ -28,7 +28,7 @@
               <a href='#' class='block'><img src='img\whatsapp.png' alt='' class='icon'></a>
               <a href='#' class='block'><img src='img\discord.png' alt='' class='icon'></a>
               <a href='#' class='block'><img src='img\instagram.png' alt='' class='icon'></a>
-              <a href='#' class='block'><img src='img\telegram.png' alt='' class='icon'></a>
+              <a href='#' class='block'><img src='img\\telegram.png' alt='' class='icon'></a>
               <a href='#' class='block'><img src='img\github.png' alt='' class='icon'></a>
             </div>
           </div>

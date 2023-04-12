@@ -18,11 +18,13 @@
 html {
   --main-color: #4779FB;
   --text-color: #515151;
+  height: 100%;
 }
 
 body {
   color: var(--text-color);
   font: 400 10px/1.5 "Open Sans", sans-serif;
+  min-height: 100%;
 }
 
 .flex {
