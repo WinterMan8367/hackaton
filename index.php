@@ -13,7 +13,7 @@
         ?>
         <div class="container">
             <div class="intro_block">
-                <div class="intro_block_markup block">
+                <div class="intro_block_markup">
                     <h1>Работайте с лучшими специалистами</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius.</p>
                     <div class="">
@@ -21,8 +21,10 @@
                             <img class="icon" src="img/search.png">
                             <input type="text" name=text" class="intro_search" placeholder="Чем я могу вам помочь?">
                         </form>
-                        <input type="submit" name="#" class="" value="Оставить заказ">
-                        <input type="submit" name="#" class="" value="Найти заказ">
+                        <div>
+                            <input type="submit" name="#" class="button_blue" value="Оставить заказ">
+                            <input type="submit" name="#" class="button_white" value="Найти заказ">
+                        </div>
                     </div>
                 </div>
                 <div class="intro_block_markup block">
@@ -31,7 +33,9 @@
             </div>
         </div>
 
-
+        <?php
+            require_once('footer.php');
+        ?>
 	    <script src="scripts/script.css"></script>
 	</body>
 </html>

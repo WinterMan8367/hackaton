@@ -10,7 +10,7 @@
             SELECT 
                 * 
             FROM USER
-            WHERE id = $id
+            WHERE id = $userId
 
         ");
 
