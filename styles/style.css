@@ -61,7 +61,6 @@ a {
   display: flex;
   flex-direction: column;
   width: 480px;
-  height: auto;
 }
 
 .intro_block h1 {
