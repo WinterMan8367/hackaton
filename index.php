@@ -7,18 +7,36 @@
         <link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="styles/headerfooter.css">
         <link rel="stylesheet" href="styles/form.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
         <?php
             require_once('php/regular_functions/functions.php');
         ?>
     </head>
 
         <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++ Формы -->
-        <form id="registration_form" action="" method="post">
-            <h1>Регистрация</h1>
-            <div class="inputs">
-                <input type="text">
-            </div>
-        </form>
+        <div style="display: none;">
+            <form id="registration_form" class="windows" action="" method="post">
+                <h1>Регистрация</h1>
+                <div class="inputs">
+                    <div style="display: flex;">
+                        <input id="lastname" type="text" placeholder="Фамилия">
+                        <input id="name" type="text" placeholder="Имя">
+                    </div>
+                    <input id="additname" type="text" placeholder="Отчество">
+                    <input id="e-mail" type="text" placeholder="e-mail">
+                    <input id="phone" type="text" placeholder="Телефон">
+                    <input type="text" id="password" placeholder="Пароль">
+                    <input type="text" id="password_1" placeholder="Повторите пароль">
+                    <input class="submit" type="submit" value="Зарегистроваться">
+                </div>
+            </form>
+
+            <form action="" method="POST" id="login">
+                
+            </form>
+        </div>
         <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
     <body>
@@ -176,143 +194,46 @@
                             <div id="bottom_markup_outo" style="min-width: 300px;">
                                 <h1 class="morg">10 000 - 40 000 RUB</h1> <!-- Цена из БД -->
                                 <input type="submit" name="#" class="button_blue" value="Оставить заказ" style="margin-top: 20px;">
-                                <input type="submit" name="#" class="button_white" value="Посмтреть" style="margin-top: 10px;">
-                            </div>
-                        </div>
-
-                        <div class="freelancer_card_search">
-                            <div id="bottom_markup_photo">
-                                <div class="photo_freelancers">
-                                    <img src="../img/user_photo.png" >
-                                </div>
-                                <div class="reyting_name">
-                                    <?php
-                                        $arr = getFreelancerRating(1);
-                                        for ($i = 0; $i < round($arr[0]["generalRating"]); $i++)
-                                        {
-                                        echo "<img src='pages\profile\img\star.png' style='width: 24px; margin: 1px'>";
-                                        }
-                                    ?>
-                                </div>
-                            </div>
-
-                            <!-- Карточка -->
-                            <div id="bottom_markup">
-                                <h1 class="more">Коваленко Михаил Алексеевич</h1><!-- Здесь ФИО из БД -->
-                                <p class="tag_list" style="color: #FF6060; background: #FFD3BA;">#Дизайнер</p> <!-- Здесь Тег из БД -->
-
-                                <a class="city_list_freelancers">г. Москва</a>
-
-
-                                <p class="description_card">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus variusLorem ipsum dolor sit amet, consectetur adipiscing elit...</p> <!-- Здесь инфа из БД -->
-                            </div>
-                            <div id="bottom_markup_outo" style="min-width: 300px;">
-                                <h1 class="morg">10 000 - 40 000 RUB</h1> <!-- Цена из БД -->
-                                <input type="submit" name="#" class="button_blue" value="Оставить заказ" style="margin-top: 20px;">
-                                <input type="submit" name="#" class="button_white" value="Посмтреть" style="margin-top: 10px;">
-                            </div>
-                        </div>
-
-                        <div class="freelancer_card_search">
-                            <div id="bottom_markup_photo">
-                                <div class="photo_freelancers">
-                                    <img src="../img/user_photo.png" >
-                                </div>
-                                <div class="reyting_name">
-                                    <?php
-                                        $arr = getFreelancerRating(1);
-                                        for ($i = 0; $i < round($arr[0]["generalRating"]); $i++)
-                                        {
-                                        echo "<img src='pages\profile\img\star.png' style='width: 24px; margin: 1px'>";
-                                        }
-                                    ?>
-                                </div>
-                            </div>
-
-                            <!-- Карточка -->
-                            <div id="bottom_markup">
-                                <h1 class="more">Коваленко Михаил Алексеевич</h1><!-- Здесь ФИО из БД -->
-                                <p class="tag_list" style="color: #FF6060; background: #FFD3BA;">#Дизайнер</p> <!-- Здесь Тег из БД -->
-
-                                <a class="city_list_freelancers">г. Москва</a>
-
-
-                                <p class="description_card">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus variusLorem ipsum dolor sit amet, consectetur adipiscing elit...</p> <!-- Здесь инфа из БД -->
-                            </div>
-                            <div id="bottom_markup_outo" style="min-width: 300px;">
-                                <h1 class="morg">10 000 - 40 000 RUB</h1> <!-- Цена из БД -->
-                                <input type="submit" name="#" class="button_blue" value="Оставить заказ" style="margin-top: 20px;">
-                                <input type="submit" name="#" class="button_white" value="Посмтреть" style="margin-top: 10px;">
-                            </div>
-                        </div>
-
-                        <div class="freelancer_card_search">
-                            <div id="bottom_markup_photo">
-                                <div class="photo_freelancers">
-                                    <img src="../img/user_photo.png" >
-                                </div>
-                                <div class="reyting_name">
-                                    <?php
-                                        $arr = getFreelancerRating(1);
-                                        for ($i = 0; $i < round($arr[0]["generalRating"]); $i++)
-                                        {
-                                        echo "<img src='pages\profile\img\star.png' style='width: 24px; margin: 1px'>";
-                                        }
-                                    ?>
-                                </div>
-                            </div>
-
-                            <!-- Карточка -->
-                            <div id="bottom_markup">
-                                <h1 class="more">Коваленко Михаил Алексеевич</h1><!-- Здесь ФИО из БД -->
-                                <p class="tag_list" style="color: #FF6060; background: #FFD3BA;">#Дизайнер</p> <!-- Здесь Тег из БД -->
-
-                                <a class="city_list_freelancers">г. Москва</a>
-
-
-                                <p class="description_card">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus variusLorem ipsum dolor sit amet, consectetur adipiscing elit...</p> <!-- Здесь инфа из БД -->
-                            </div>
-                            <div id="bottom_markup_outo" style="min-width: 300px;">
-                                <h1 class="morg">10 000 - 40 000 RUB</h1> <!-- Цена из БД -->
-                                <input type="submit" name="#" class="button_blue" value="Оставить заказ" style="margin-top: 20px;">
-                                <input type="submit" name="#" class="button_white" value="Посмтреть" style="margin-top: 10px;">
-                            </div>
-                        </div>
-
-                        <div class="freelancer_card_search">
-                            <div id="bottom_markup_photo">
-                                <div class="photo_freelancers">
-                                    <img src="../img/user_photo.png" >
-                                </div>
-                                <div class="reyting_name">
-                                    <?php
-                                        $arr = getFreelancerRating(1);
-                                        for ($i = 0; $i < round($arr[0]["generalRating"]); $i++)
-                                        {
-                                        echo "<img src='pages\profile\img\star.png' style='width: 24px; margin: 1px'>";
-                                        }
-                                    ?>
-                                </div>
-                            </div>
-
-                            <!-- Карточка -->
-                            <div id="bottom_markup">
-                                <h1 class="more">Коваленко Михаил Алексеевич</h1><!-- Здесь ФИО из БД -->
-                                <p class="tag_list" style="color: #FF6060; background: #FFD3BA;">#Дизайнер</p> <!-- Здесь Тег из БД -->
-
-                                <a class="city_list_freelancers">г. Москва</a>
-
-
-                                <p class="description_card">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus variusLorem ipsum dolor sit amet, consectetur adipiscing elit...</p> <!-- Здесь инфа из БД -->
-                            </div>
-                            <div id="bottom_markup_outo" style="min-width: 300px;">
-                                <h1 class="morg">10 000 - 40 000 RUB</h1> <!-- Цена из БД -->
-                                <input type="submit" name="#" class="button_blue" value="Оставить заказ" style="margin-top: 20px;">
-                                <input type="submit" name="#" class="button_white" value="Посмтреть" style="margin-top: 10px;">
+                                <input type="submit" name="#" class="button_white" value="Подробнее" style="margin-top: 10px;">
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="container block_about_us">
+                <div class="markup_about_us_video">
+                    <div class="video_block">
+                        <div class="flex" style="width: 100%; justify-content: space-between;">
+                            <h1>Видео</h1>
+                            <img src="../img/lanse_img_video.png" alt="Заебали вы меня">
+                        </div>
+                        <div class="video">Говно видео</div>
+                    </div>
+                </div>
+                <div class="markup_about_us_text">
+                    <h1>О нашей компании</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius.
+                    </p><br>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc.
+                    </p><br>
+                    <p>
+                        Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius.
+                    </p><br>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius.
+                    </p>
+                </div>
+            </div>
+
+            <div class="container">
+                <div>
+                    <h1>Часто задаваемые вопросы</h1>
+                    <span id="line"></span>
+                </div>
+                <div></div>
             </div>
         </main>
         <div style="height: 100vh;"></div>
@@ -320,6 +241,8 @@
         <?php
             require_once('php/footer.php');
         ?>
-	    <script src="scripts/script.css"></script>
+
+        
+	    <script src="/scripts/script.js"></script>
 	</body>
 </html>
