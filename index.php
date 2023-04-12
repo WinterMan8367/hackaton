@@ -35,6 +35,9 @@
             </div>
         </main>
 
+        <?php
+            require_once('footer.php');
+        ?>
 	    <script src="scripts/script.css"></script>
 	</body>
 </html>
