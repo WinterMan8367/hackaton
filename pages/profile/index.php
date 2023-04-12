@@ -35,5 +35,8 @@
       </div>
     </section>
   </main>
+  <?php
+            require_once('header.php');
+  ?>
 </body>
 </html>

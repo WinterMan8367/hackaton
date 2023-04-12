@@ -33,7 +33,9 @@
             </div>
         </div>
 
-
+        <?php
+            require_once('header.php');
+        ?>
 	    <script src="scripts/script.css"></script>
 	</body>
 </html>
