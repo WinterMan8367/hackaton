@@ -198,7 +198,7 @@ error_reporting(E_ALL);
                   echo "<p class='description'>", $elem['description'], "</p>";
                   echo "</div>
                   <div class='right flex'>";
-                  echo "<h3 class='price'>", $elem['priceFrom'], "₽ - ", $v['priceBefore'], "₽</h3>";
+                  echo "<h3 class='price'>", $elem['priceFrom'], "₽ - ", $elem['priceBefore'], "₽</h3>";
                   echo "<button class='block button one'>Посмотреть</button>
                   <button class='block button two'>Отказаться</button>
                   </div>
@@ -233,7 +233,7 @@ error_reporting(E_ALL);
                   echo "<p class='description'>", $elem['description'], "</p>";
                   echo "</div>
                   <div class='right flex'>";
-                  echo "<h3 class='price'>", $elem['priceFrom'], "₽ - ", $v['priceBefore'], "₽</h3>";
+                  echo "<h3 class='price'>", $elem['priceFrom'], "₽ - ", $elem['priceBefore'], "₽</h3>";
                   echo "<button class='block button one'>Посмотреть</button>
                   <button class='block button two'>Отказаться</button>
                   </div>
