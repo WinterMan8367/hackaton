@@ -152,7 +152,7 @@
 
                                 <p class="description_card">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus variusLorem ipsum dolor sit amet, consectetur adipiscing elit...</p> <!-- Здесь инфа из БД -->
                             </div>
-                            <div id="bottom_markup_photo">
+                            <div id="bottom_markup_photo" style="min-width: 200px;">
                                 <input type="submit" name="#" class="button_blue" id="button_indent"value="Оставить заказ">
                                 <input type="submit" name="#" class="button_white" value="Найти заказ">
                             </div>
