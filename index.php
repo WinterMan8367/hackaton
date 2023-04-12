@@ -94,7 +94,16 @@
                 </div>
             </div>
 
-            <!-- Блок -->
+            <!-- Категории для поиска -->
+            <div class="container category_block">
+                <p class="tag_category">Дизайнер</p> <!--Теги с БД -->
+            </div>
+
+            <div class="container">
+                <div class="o">
+                    
+                </div>
+            </div>
         </main>
         <div style="height: 100vh;"></div>
 
