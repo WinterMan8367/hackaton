@@ -1,8 +1,6 @@
 <?php
   echo
-      "<link rel='stylesheet' href='styles/style.css'>
-      <link rel='stylesheet' href='styles/headerfooter.css'>
-      <header id='header'>
+      "<header id='header'>
 				<section id='top_panel'>
 					<div class='container'>
 						<div class='inner flex'>
