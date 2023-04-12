@@ -11,5 +11,5 @@ function card_otclick_2() {
 }
   
 
-document.querySelector("#head_lol").addEventListener("mouseover", card_otclick);
-document.querySelector("#head_lol").addEventListener("mouseout", card_otclick_2);
+document.querySelector(".portfolio_item").addEventListener("mouseover", card_otclick);
+document.querySelector(".portfolio_item").addEventListener("mouseout", card_otclick_2);

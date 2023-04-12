@@ -87,7 +87,7 @@
             <div class="content flex">
               <!-- Хуйня, которая элемент порфтолио, макет -->
               <div class="portfolio_item">
-                <img class="card" src="#" alt="">
+                <img class="card1" src="#" alt="">
                 <a href=""><h3 id="head_lol">Сайт кондитерской</h3></a> <!--тоже по БД прогнать-->
                 <p class="description">Нахуй я тут есть ААА!!! PRess FFF</p> <!--Описание, а тут и так всё ясно, если нет, то 50R мне на кату и я расскажу ))))) Шутка от мишутки-->
                 <div class="tools flex">
@@ -101,6 +101,103 @@
         </div>
       </div>
     </section>
+
+    <section id="module_3">
+      <div class="container">
+        <div class="inner">
+        <h2 class="heading">Ваши отклики</h2>
+          <div class="wrapper">
+            <div class="toper">
+              <div class="flex">
+                <img src="img/suitcase.png">
+                <a href="#">Найти заказы</a> <!--Типа добавить элемент портфолио, макет его свёрстан, только файлы добавить)-->
+              </div>
+            </div>
+            <div class="content flex">
+              <!-- Начало карточки-->
+              <div class="card flex">
+                <div class="left flex">
+                  <h3 class="suka_bliad">Убить Зеленского во благо РОССИИИИИИИИИИИ!!!!!!!</h3>
+                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed.  Laoreet odio dignissim sed. Donec ut vestibulum nisiorbi tincidunt dui diam, at sollicitudin mi consequat at. . Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed...</p>
+                </div>
+                <div class="right flex">
+                  <h3 class="price">
+                    100000 - 150000 Руб
+                  </h3>
+                  <button class="block button one">Посмотреть</button>
+                  <button class="block button two">Отказаться</button>
+                </div>
+              </div>
+              <!-- Конец -->
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="module_4">
+      <div class="container">
+        <div class="inner">
+        <h2 class="heading">Ваши заказы</h2>
+          <div class="wrapper">
+            <div class="toper">
+              <div class="flex">
+                <img src="img/download.png">
+                <a href="#">Добавить</a> <!--Типа добавить элемент портфолио, макет его свёрстан, только файлы добавить)-->
+              </div>
+            </div>
+            <div class="content flex">
+              <!-- Начало карточки-->
+              <div class="card flex">
+                <div class="left flex">
+                  <h3 class="suka_bliad">Убить Зеленского во благо РОССИИИИИИИИИИИ!!!!!!!</h3>
+                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed.  Laoreet odio dignissim sed. Donec ut vestibulum nisiorbi tincidunt dui diam, at sollicitudin mi consequat at. . Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed...</p>
+                </div>
+                <div class="right flex">
+                  <h3 class="price">
+                    100000 - 150000 Руб
+                  </h3>
+                  <button class="block button one">Посмотреть</button>
+                  <button class="block button two">Отказаться</button>
+                </div>
+              </div>
+              <!-- Конец -->
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="module_5">
+      <div class="container">
+        <div class="inner">
+        <h2 class="heading">Заказы пользователя</h2>
+          <div class="wrapper">
+            <div class="toper">
+              <div class="flex">
+                <img src="img/download.png">
+                <a href="#">Добавить</a> <!--Типа добавить элемент портфолио, макет его свёрстан, только файлы добавить)-->
+              </div>
+            </div>
+            <div class="content flex">
+              <!-- Начало карточки-->
+              <div class="card flex">
+                <div class="left flex">
+                  <h3 class="suka_bliad">Убить Зеленского во благо РОССИИИИИИИИИИИ!!!!!!!</h3>
+                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed.  Laoreet odio dignissim sed. Donec ut vestibulum nisiorbi tincidunt dui diam, at sollicitudin mi consequat at. . Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed...</p>
+                </div>
+                <div class="right flex">
+                  <h3 class="price">
+                    100000 - 150000 Руб
+                  </h3>
+                  <button class="block button one">Посмотреть</button>
+                  <button class="block button two">Отказаться</button>
+                </div>
+              </div>
+              <!-- Конец -->
+            </div>
+        </div>
+      </div>
+    </section>
+
   </main>
   <script src="scripts/scripts.js"></script>
   <?php
