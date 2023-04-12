@@ -6,11 +6,11 @@
   <title>Profile</title>
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="../../styles/headerfooter.css">
-  <?php require_once('../../functions.php') ?>
   <link rel="stylesheet" href="../../styles/style.css">
+  <?php require_once('../../php/regular_functions/functions.php') ?>
 </head>
 <body>
-  <?php require_once('../../header.php') ?>
+  <?php require_once('../../php/header.php') ?>
   <main id="main">
     <section id="module_1">
       <div class="container">
@@ -48,7 +48,15 @@
               </div>
             </a>
             <div class="tags flex">
-              <p class="tag" style=" color: #FF6060; background: #FFD3BA;">#Дизайнер</p> <!--Теги с БД Цвет выбирай сам) Можно в бд занести-->
+              <?php
+                $arr = getUserCategories(1);
+                foreach ($arr as $elem)
+                {
+                  echo "<p class='tag' style='color: #FF6060; background: #FFD3BA;'>#";
+                  echo $elem["categoryName"];
+                  echo "</p>";
+                }
+              ?>
             </div>
             <p class="description">
             <?php
@@ -97,7 +105,7 @@
   </main>
   <script src="scripts/scripts.js"></script>
   <?php
-    require_once('../../footer.php');
+    require_once('../../php/footer.php');
   ?>
 </body>
 </html>

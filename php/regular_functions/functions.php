@@ -23,8 +23,6 @@
 
         $arr = $db->goResult("
             SELECT 
-                freelancerId, 
-                categoryId,
                 (SELECT NAME FROM CATEGORY WHERE ID = categoryId) categoryName
             FROM FREELANCERS_CONN_CATEGORIES
             WHERE freelancerId = $userId
@@ -59,6 +57,20 @@
                 generalRating
             FROM EMPLOYERS
             WHERE id = $userId
+        ");
+
+        return $arr;
+    }
+
+    function getCategories() 
+    {
+        $arr = [];
+        $db = new MysqlModel();
+
+        $arr = $db->goResult("
+            SELECT 
+                Name
+            FROM CATEGORY
         ");
 
         return $arr;

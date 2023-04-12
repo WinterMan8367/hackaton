@@ -140,7 +140,7 @@ h2.heading {
 
 .button_blue:hover {
   background-color: var(--blue-color);
-  scale: 0.98;
+  transform: scale(1.1);
   box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.25);
   border-color: var(--blue-color);
 }
@@ -161,7 +161,7 @@ h2.heading {
 
 .button_white:hover {
   background-color: var(--main-color);
-  scale: 0.98;
+  transform: scale(1.1);
   color: #FFFFFF;
 }
 
@@ -223,4 +223,69 @@ h2.heading {
 .arrow {
   display: flex;
   align-items: center;
+}
+
+/* ----------- Категории ----------- */
+.category_block {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Стиль тега категории */
+.tag_category {
+  font-size: 16px;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  color: var(--text-color);
+  box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+  margin: 5px;
+  border: none;
+  transition: all 0.2s;
+}
+
+.tag_category:hover {
+  background-color: var(--main-color);
+  transform: scale(1.08);
+  color: white;
+}
+
+.tag_category:active {
+  background-color: var(--blue-color);
+}
+
+/* ----------- Категории ----------- */
+.block_list_of_freelancers {
+  max-height: 1270px;
+  min-height: 400px;
+  width: 100%;
+  border-radius: 16px;
+  background-color: var(--white-color);
+  box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.25);
+  overflow: scroll;
+
+  display: flex;
+  flex-direction: column;
+  flex-direction: row;
+}
+
+.list_freelancers_menu {
+  background-color: var(--main-color);
+  color: #FFFFFF;
+  font-size: 16px;
+  height: 60px;
+  width: 100%;
+  border-radius: 16px;
+  margin: 10px;
+  padding: 0px 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
