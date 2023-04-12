@@ -28,6 +28,7 @@
             echo "<br><br><center><h1>Тест кода</h1></center><br>";
 
             $arr = getUserCategories(1);
+            var_dump($arr);
             foreach ($arr as $elem)
             {
                 echo $elem["categoryName"];
