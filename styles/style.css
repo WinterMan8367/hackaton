@@ -42,7 +42,7 @@ a {
 }
 
 
-/* Интро */
+/* ----------- Интро ----------- */
 .intro {
   margin-top: 30px;
 }
@@ -163,4 +163,19 @@ a {
   width: 500px;
   height: 500px;
   border-radius: 16px;
+}
+
+
+
+/* ----------- Этапы ----------- */
+
+.stage_block {
+  height: 95px;
+  width: 280px;
+  
+  border-radius: 16px;
+  background-color: #F9F9F9;
+  box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
 }

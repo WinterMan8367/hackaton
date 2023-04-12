@@ -33,11 +33,21 @@
                     </div>
                 </div>
             </div>
+            <div class="container">
+                <div>
+                    <div class="stage_block">
+                        <img width="80px" height="80px"src="">
+                        <h2>Заказчик</h2>
+                        <p>Предложите заказ</p>
+
+                    </div>
+                </div>
+            </div>
         </main>
 
-        <?php
+        <!--<?php
             require_once('footer.php');
-        ?>
+        ?>-->
 	    <script src="scripts/script.css"></script>
 	</body>
 </html>
