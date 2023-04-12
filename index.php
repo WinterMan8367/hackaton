@@ -7,12 +7,12 @@
 		<link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="styles/headerfooter.css">
         <?php
-            require_once('functions.php');
+            require_once('php/regular_functions/functions.php');
         ?>
     </head>
     <body>
         <?php
-            require_once('header.php');
+            require_once('php/header.php');
         ?>
         <main>
             <div class="container intro">
@@ -135,7 +135,7 @@
         <div style="height: 100vh;"></div>
 
         <?php
-            require_once('footer.php');
+            require_once('php/footer.php');
         ?>
 	    <script src="scripts/script.css"></script>
 	</body>
