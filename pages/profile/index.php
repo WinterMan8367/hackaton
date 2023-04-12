@@ -18,6 +18,7 @@
           <div class="left">
             <div>
               <img class="profile_avatar" src="#">
+              <button  class="button one" href="#">Написать сообщение</button>
               <button  class="button" href="#">Редактировать профиль</button>
             </div>
           </div>
