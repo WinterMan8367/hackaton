@@ -61,7 +61,7 @@ a {
   display: flex;
   flex-direction: column;
   width: 480px;
-  height: 450px;
+  height: auto;
 }
 
 .intro_block h1 {
@@ -82,8 +82,6 @@ a {
 }
 
 .button_blue, .button_white{
- 
-
   padding: 16px 34px;
   border-radius: 14px;
   font-size: 20px;
