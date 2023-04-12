@@ -6,10 +6,21 @@
 		<title>header</title>
         <link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="styles/headerfooter.css">
+        <link rel="stylesheet" href="styles/form.css">
         <?php
             require_once('php/regular_functions/functions.php');
         ?>
     </head>
+
+        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++ Формы -->
+        <form id="registration_form" action="" method="post">
+            <h1>Регистрация</h1>
+            <div class="inputs">
+                <input type="text">
+            </div>
+        </form>
+        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
     <body>
         <?php
             require_once('php/header.php');
