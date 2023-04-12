@@ -36,4 +36,110 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  font: 400 10px/1.5 "Open Sans", sans-serif;
 }
+
+#module_1 {
+  margin-top: 60px;
+}
+
+#module_1 .inner {
+  justify-content: left;
+}
+
+#module_1 .profile_avatar {
+  width: 390px;
+  height: 390px;
+  border-radius: 23px;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+}
+
+#module_1 .profile_avatar+.button {
+  width: 390px;
+  padding: 16px 0px;
+  color: white;
+  font: 400 20px/1.5 "Open Sans", sans-serif;
+  background: var(--main-color);
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  border: none;
+} 
+
+#module_1 .profile_avatar+.button:hover {
+  scale: 0.98;
+  box-shadow: none;
+}
+
+#module_1 #name {
+  font-size: 40px;
+  color: #3450B2;
+  margin-top: 10px;
+}
+
+#module_1 .reyting_name {
+  margin-top: 8px;
+}
+
+#module_1 .reyting_name img {
+  width: 36px;
+  height: 36px;
+  margin-right: 5px;
+}
+
+#module_1 #place .icon {
+  width: 16px;
+  height: 16px;
+}
+
+#module_1 #place {
+  margin: 8px 0px;
+  padding: 2px 5px;
+  display: inline-flex;
+  font-size: 16px;
+  color: #3450B2;
+  text-decoration: underline;
+  align-items: center;
+  gap: 8px;
+}
+
+#module_1 #place:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+#module_1 .description {
+  max-width: 760px;
+  font-size: 14px;
+}
+
+#module_1 .left {
+  margin-right: 40px;
+  max-width: 390px;
+}
+
+#module_1 .bottom {
+  align-items: center;
+  margin-top: 30px;
+}
+
+#module_1 .status {
+  display: inline-block;
+  margin-right: 20px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  background-color: greenyellow;
+  color: white;
+}
+
+#module_1 .go_to {
+  font-size: 12px;
+  color: #4779FB;
+  text-decoration: underline;
+}
+
+#module_1 .go_to:hover {
+  color: #3450B2;
+}
+
+
+
+
