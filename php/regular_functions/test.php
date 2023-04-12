@@ -2,6 +2,7 @@
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
+    session_start();
 	require_once('db_model.php');
     require_once('functions.php');
 ?>
@@ -27,13 +28,47 @@
             print_r($arr);
             echo "<br><br><center><h1>Тест кода</h1></center><br>";
 
-            $arr = getUserCategories(1);
+            $arr = getPortfolio(1);
             var_dump($arr);
+            echo "<br><hr>";
             foreach ($arr as $elem)
             {
-                echo $elem["categoryName"];
+                print_r($elem);
+                echo "<br><br>";
             }
+            echo "<hr>";
+            $arr = getPortfolio(1);
+            foreach ($arr as $elem)
+            {
+                foreach ($elem as $key => $value)
+                {   
+                    if ($key == 'title') {
+                        echo "<a href='#'><h3>";
+                        echo $value;
+                        echo "</h3></a>";
+                    }
+                    elseif ($key == 'description')
+                    {
+                        echo "<p>";
+                        echo $value;
+                        echo "</p>";
+                    }
+                    elseif ($key is array)
+                    {
+                        foreach ($key as $doublekey => $triplelem)
+                        {
+                            // перебор элементов массива
+                        }
+                    }
+                }
+            }
+
             
         ?>
+            <hr>
+             <div>
+                <a href="#"><h3>Сайт кондитерской</h3></a>
+                <p>Нахуй я тут есть ААА!!! PRess FFF</p>
+              </div>
 	</body>
 </html>
