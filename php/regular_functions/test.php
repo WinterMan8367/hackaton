@@ -29,40 +29,20 @@
             echo "<br><br><center><h1>Тест кода</h1></center><br>";
 
             $arr = getPortfolio(1);
-            var_dump($arr);
-            echo "<br><hr>";
-            foreach ($arr as $elem)
-            {
-                print_r($elem);
-                echo "<br><br>";
-            }
+            echo test($arr);
             echo "<hr>";
-            $arr = getPortfolio(1);
-            foreach ($arr as $elem)
-            {
-                foreach ($elem as $key => $value)
-                {   
-                    if ($key == 'title') {
-                        echo "<a href='#'><h3>";
-                        echo $value;
-                        echo "</h3></a>";
-                    }
-                    elseif ($key == 'description')
-                    {
-                        echo "<p>";
-                        echo $value;
-                        echo "</p>";
-                    }
-                    elseif ($key is array)
-                    {
-                        foreach ($key as $doublekey => $triplelem)
-                        {
-                            // перебор элементов массива
-                        }
-                    }
+
+            foreach ($arr as $key => $value) {    
+                echo "<div><a href='#'><h3>";
+                echo $value['title'];
+                echo "</h3></a>";
+                echo "<p>";
+                echo $value['description'];
+                echo "</p></div>";
+                foreach ($value['files'] as $k => $v){
+                    echo $v['filepath'], $v['filename'], $v['extension'];
                 }
             }
-
             
         ?>
             <hr>
