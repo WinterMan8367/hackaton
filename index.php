@@ -102,10 +102,25 @@
                 <p class="tag_category">Дизайнер</p> <!--Теги с БД -->
             </div>
 
-            <!-- Категории для поиска -->
+            <!-- Блок списка фрилансеров -->
             <div class="container">
                 <div class="block_list_of_freelancers">
-                    
+                    <div class="list_freelancers_menu">
+                        <div class="flex">
+                            <p>Искать по:</p>
+                            <input type="text" name="" class="" placeholder="Теги, фрилансеры, работа">
+                        </div>
+
+                        <div class="flex">
+                            <p>Сортировка по:</p>
+                            <select>
+                                <option>Рейтингу</option>
+                                <option>По убыванию</option>
+                                <option>По возрастанию</option>
+                            </select>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </main>

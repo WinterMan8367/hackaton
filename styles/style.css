@@ -246,6 +246,7 @@ h2.heading {
 }
 
 
+/* ----------- Категории ----------- */
 .block_list_of_freelancers {
   max-height: 1270px;
   min-height: 400px;
@@ -254,4 +255,23 @@ h2.heading {
   background-color: var(--white-color);
   box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.25);
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  flex-direction: row;
+}
+
+.list_freelancers_menu {
+  background-color: var(--main-color);
+  color: #FFFFFF;
+  font-size: 16px;
+  height: 60px;
+  width: 100%;
+  border-radius: 16px;
+  margin: 10px;
+  padding: 0px 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
