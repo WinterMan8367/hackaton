@@ -20,8 +20,10 @@
             <form id="registration_form" class="windows" action="" method="post">
                 <h1>Регистрация</h1>
                 <div class="inputs">
-                    <input id="lastname" type="text" placeholder="Фамилия">
-                    <input id="name" type="text" placeholder="Имя">
+                    <div style="display: flex;">
+                        <input id="lastname" type="text" placeholder="Фамилия">
+                        <input id="name" type="text" placeholder="Имя">
+                    </div>
                     <input id="additname" type="text" placeholder="Отчество">
                     <input id="e-mail" type="text" placeholder="e-mail">
                     <input id="phone" type="text" placeholder="Телефон">
