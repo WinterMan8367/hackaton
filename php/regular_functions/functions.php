@@ -1,6 +1,60 @@
 <?php
     require_once('db_model.php');
 
+    function test($arr)
+    {
+        $margin = "-------";
+        echo "Array [<br>";
+        foreach ($arr as $key => $elem)
+        {
+            if (is_array($elem) == false)
+            {
+                echo $margin, "[$key] => [$elem]<br>";
+            }
+            else
+            {
+                echo $margin, "Array [<br>";
+                foreach ($elem as $key2 => $elem2)
+                {
+                    if (is_array($elem2) == false)
+                    {
+                        echo $margin, $margin, "[$key2] => [$elem2]<br>";
+                    }
+                    else
+                    {   
+                        echo $margin, $margin, "Array [<br>";
+                        foreach ($elem2 as $key3 => $elem3)
+                        {
+                            if (is_array($elem3) == false)
+                            {
+                                echo $margin, $margin, $margin, "[$key3] => [$elem3]<br>";
+                            }
+                            else
+                            {
+                                echo $margin, $margin, $margin, "Array [<br>";
+                                foreach ($elem3 as $key4 => $elem4)
+                                {
+                                    if (is_array($elem4) == false)
+                                    {
+                                        echo $margin, $margin, $margin, $margin, "[$key4] => [$elem4]<br>";
+                                    }
+                                    else
+                                    {
+                                        echo $margin, $margin, $margin, $margin, "Array<br>";
+                                    }
+                                }
+                                echo $margin, $margin, $margin, $margin, "]<br>";
+                            }
+                        }
+                        echo $margin, $margin, $margin, "]<br>";
+                    }
+                }
+                echo $margin, $margin, "]<br>";
+            }
+        }
+        echo $margin, "]<br>";
+    }
+
     function getUserInfo($userId)
     {
         $arr = [];
@@ -121,58 +175,20 @@
 
         return $arr;
     }
-    function test($arr)
+
+    function getOrder($orderId)
     {
-        $margin = "-------";
-        echo "Array [<br>";
-        foreach ($arr as $key => $elem)
-        {
-            if (is_array($elem) == false)
-            {
-                echo $margin, "[$key] => [$elem]<br>";
-            }
-            else
-            {
-                echo $margin, "Array [<br>";
-                foreach ($elem as $key2 => $elem2)
-                {
-                    if (is_array($elem2) == false)
-                    {
-                        echo $margin, $margin, "[$key2] => [$elem2]<br>";
-                    }
-                    else
-                    {   
-                        echo $margin, $margin, "Array [<br>";
-                        foreach ($elem2 as $key3 => $elem3)
-                        {
-                            if (is_array($elem3) == false)
-                            {
-                                echo $margin, $margin, $margin, "[$key3] => [$elem3]<br>";
-                            }
-                            else
-                            {
-                                echo $margin, $margin, $margin, "Array [<br>";
-                                foreach ($elem3 as $key4 => $elem4)
-                                {
-                                    if (is_array($elem4) == false)
-                                    {
-                                        echo $margin, $margin, $margin, $margin, "[$key4] => [$elem4]<br>";
-                                    }
-                                    else
-                                    {
-                                        echo $margin, $margin, $margin, $margin, "Array<br>";
-                                    }
-                                }
-                                echo $margin, $margin, $margin, $margin, "]<br>";
-                            }
-                        }
-                        echo $margin, $margin, $margin, "]<br>";
-                    }
-                }
-                echo $margin, $margin, "]<br>";
-            }
-        }
-        echo $margin, "]<br>";
+        $arr = [];
+        $db = new MysqlModel();
+
+        $arr = $db->goResult("
+            SELECT
+                *
+            FROM
+                ORDER_
+        ");
+
+        return $arr;
     }
 
 ?>
