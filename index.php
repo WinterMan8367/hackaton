@@ -7,18 +7,34 @@
         <link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="styles/headerfooter.css">
         <link rel="stylesheet" href="styles/form.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
         <?php
             require_once('php/regular_functions/functions.php');
         ?>
     </head>
 
         <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++ Формы -->
-        <form id="registration_form" action="" method="post">
-            <h1>Регистрация</h1>
-            <div class="inputs">
-                <input type="text">
-            </div>
-        </form>
+        <div style="display: none;">
+            <form id="registration_form" class="windows" action="" method="post">
+                <h1>Регистрация</h1>
+                <div class="inputs">
+                    <input id="lastname" type="text" placeholder="Фамилия">
+                    <input id="name" type="text" placeholder="Имя">
+                    <input id="additname" type="text" placeholder="Отчество">
+                    <input id="e-mail" type="text" placeholder="e-mail">
+                    <input id="phone" type="text" placeholder="Телефон">
+                    <input type="text" id="password" placeholder="Пароль">
+                    <input type="text" id="password_1" placeholder="Повторите пароль">
+                    <input class="submit" type="submit" value="Зарегистроваться">
+                </div>
+            </form>
+
+            <form action="" method="POST" id="login">
+                
+            </form>
+        </div>
         <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
     <body>
@@ -223,6 +239,8 @@
         <?php
             require_once('php/footer.php');
         ?>
-	    <script src="scripts/script.css"></script>
+
+        
+	    <script src="/scripts/script.js"></script>
 	</body>
 </html>
