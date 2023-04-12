@@ -6,7 +6,6 @@
 		<title>header</title>
         <link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="styles/headerfooter.css">
-        <link rel="stylesheet" href="pages/profile/styles/style.css">
         <?php
             require_once('php/regular_functions/functions.php');
         ?>
