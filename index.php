@@ -103,9 +103,9 @@
                     $arr = getCategories();
                     for ($i = 0; $i < 15; $i++)
                     {
-                        echo "<p class='tag_category'>";
+                        echo "<button class='tag_category'>";
                         echo $arr[$i]["Name"];
-                        echo "</p>";
+                        echo "</button>";
                     }
                 ?>
             </div>

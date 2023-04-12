@@ -228,9 +228,11 @@ h2.heading {
 /* ----------- Категории ----------- */
 .category_block {
   margin-top: 60px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 /* Стиль тега категории */
@@ -240,11 +242,23 @@ h2.heading {
   padding: 10px;
   border-radius: 16px;
   background-color: #FFFFFF;
+  color: var(--text-color);
   box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.25);
   transition: transform 0.2s ease;
-  margin: 0 10px;
+  margin: 5px;
+  border: none;
+  transition: all 0.2s;
 }
 
+.tag_category:hover {
+  background-color: var(--main-color);
+  transform: scale(1.08);
+  color: white;
+}
+
+.tag_category:active {
+  background-color: var(--blue-color);
+}
 
 /* ----------- Категории ----------- */
 .block_list_of_freelancers {
@@ -254,7 +268,7 @@ h2.heading {
   border-radius: 16px;
   background-color: var(--white-color);
   box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
+  overflow: scroll;
 
   display: flex;
   flex-direction: column;
