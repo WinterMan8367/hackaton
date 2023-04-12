@@ -6,6 +6,9 @@
 		<title>header</title>
 		<link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="styles/headerfooter.css">
+        <?php
+            require_once('functions.php');
+        ?>
     </head>
     <body>
         <?php
