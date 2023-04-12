@@ -43,4 +43,55 @@
   margin-right: 5px;
 }
 
+#footer {
+  background: var(--main-color);
+  padding: 25px 0px 0px;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0px;
+  left:0px;
+  right: 0px;
+}
 
+/* Вторая часть */
+
+#footer .inner {
+  justify-content: space-between;
+}
+
+#footer .left .it {
+  align-items: center;
+}
+
+#footer .left .it:hover
+,#footer .left a>img:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#footer .left .it .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+#footer .left
+,#footer .center {
+  margin-top: 25px;
+}
+
+#footer .left .social {
+  margin-top: 40px;
+  gap: 15px;
+}
+
+#footer .left .social .icon {
+  width: 36px;
+  height: 36px;
+}
+
+.copyr {
+  width: 1270px;
+  justify-content: center;
+  margin: 8px 0px 3px;
+}
