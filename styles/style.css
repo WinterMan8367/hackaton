@@ -308,3 +308,9 @@ h2.heading {
   border: none;
   width: 100%;
 }
+
+.sort_by_rating {
+  border: none;
+  color: var(--main-color);
+  border-radius: 8px;
+}
