@@ -36,9 +36,9 @@
             <div class="container">
                 <div>
                     <div class="stage_block">
-                        <img width="80px" height="80px"src="">
+                        <img width="80px" height="80px" src="../img/stage_one_img.png">
                         <div>
-                            <div>
+                            <div class="flex">
                                 <img src="../img/stage_one.png">
                                 <h1>Заказчик</h1>
                             </div>
@@ -49,9 +49,9 @@
             </div>
         </main>
 
-        <!--<?php
+        <?php
             require_once('footer.php');
-        ?>-->
+        ?>
 	    <script src="scripts/script.css"></script>
 	</body>
 </html>
