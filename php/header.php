@@ -1,6 +1,6 @@
 <?php
-  echo
-      "<header id='header'>
+    $html = <<<HTML
+      <header id='header'>
 				<section id='top_panel'>
 					<div class='container'>
 						<div class='inner flex'>
@@ -10,7 +10,7 @@
                 <a href='#'>Найти фрилансера</a>
               </div>
               <div class='right flex'>
-                <div class='registration flex'>
+                <div onclick="$.fancybox('#registration_form')" class='registration flex'>
                   <img class='icon' src='img/user_add.png'>
                   <a id='registration_link' href='#'>Регистрация</a>
                 </div>
@@ -23,5 +23,10 @@
 					</div>
 				</section>
 			</header>
-	    <script src='scripts/script.css'></script>";
+	    <script src='scripts/script.js'></script>
+HTML;
+
+
+  echo $html;
+
 ?>
