@@ -13,7 +13,7 @@
             }
             else
             {
-                echo $margin, "Array [<br>";
+                echo $margin, "[$key] => Array [<br>";
                 foreach ($elem as $key2 => $elem2)
                 {
                     if (is_array($elem2) == false)
@@ -22,7 +22,7 @@
                     }
                     else
                     {   
-                        echo $margin, $margin, "Array [<br>";
+                        echo $margin, $margin, "[$key] => Array [<br>";
                         foreach ($elem2 as $key3 => $elem3)
                         {
                             if (is_array($elem3) == false)
@@ -31,7 +31,7 @@
                             }
                             else
                             {
-                                echo $margin, $margin, $margin, "Array [<br>";
+                                echo $margin, $margin, $margin, "[$key] => Array [<br>";
                                 foreach ($elem3 as $key4 => $elem4)
                                 {
                                     if (is_array($elem4) == false)
@@ -40,7 +40,7 @@
                                     }
                                     else
                                     {
-                                        echo $margin, $margin, $margin, $margin, "Array<br>";
+                                        echo $margin, $margin, $margin, $margin, "[$key] => Array<br>";
                                     }
                                 }
                                 echo $margin, $margin, $margin, $margin, "]<br>";
@@ -176,7 +176,37 @@
         return $arr;
     }
 
-    function getOrder($orderId)
+    function getOrderInfoForFreelancer($userId)
+    {
+        $arr = [];
+        $db = new MysqlModel();
+
+        $arr = $db->goResult("
+            SELECT
+                *
+            FROM
+                ORDER_CONN_RESPONSE
+            WHERE
+                freelancerId = $userId
+        ");
+
+        foreach ($arr as $key => $value)
+        {
+            $id = $value['id'];
+            $arr[$key]['orders'] = $db->goResult("
+                SELECT
+                    *
+                FROM
+                    ORDER_
+                WHERE
+                    id = $id
+            ");
+        }
+
+        return $arr;
+    }
+
+    function getOrderInfo($userId)
     {
         $arr = [];
         $db = new MysqlModel();
@@ -186,6 +216,8 @@
                 *
             FROM
                 ORDER_
+            WHERE
+                employerId = $userId
         ");
 
         return $arr;

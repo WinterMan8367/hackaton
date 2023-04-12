@@ -32,23 +32,8 @@
             echo test($arr);
             echo "<hr>";
 
-            foreach ($arr as $key => $value) {    
-                echo "<div><a href='#'><h3>";
-                echo $value['title'];
-                echo "</h3></a>";
-                echo "<p>";
-                echo $value['description'];
-                echo "</p></div>";
-                foreach ($value['files'] as $k => $v){
-                    echo $v['filepath'], $v['filename'], $v['extension'];
-                }
-            }
-            
+            $arr = getOrderInfo(1);
+            echo test($arr);
         ?>
-            <hr>
-             <div>
-                <a href="#"><h3>Сайт кондитерской</h3></a>
-                <p>Нахуй я тут есть ААА!!! PRess FFF</p>
-              </div>
 	</body>
 </html>

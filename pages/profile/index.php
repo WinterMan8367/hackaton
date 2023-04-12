@@ -94,9 +94,11 @@ error_reporting(E_ALL);
               <!-- Хуйня, которая элемент порфтолио, макет -->
                 <?php
                   $arr = getPortfolio(1);
-                  foreach ($arr as $key => $value) {
+                  foreach ($arr as $key => $value)
+                  {
                     echo "<div class='portfolio_item'>";
-                    foreach ($value['files'] as $k => $v){
+                    foreach ($value['files'] as $k => $v)
+                    {
                       echo "<img class='card1' src='", $v['filepath'], $v['filename'], $v['extension'], "' alt=''>";
                     }    
                     echo "<a href=''><h3 id='head_lol'>";
@@ -134,23 +136,27 @@ error_reporting(E_ALL);
             </div>
             <div class="content flex">
               <!-- Начало карточки-->
-              <div class="card flex">
-                <div class="left flex">
-                  <h3 class="suka_bliad">Убить Зеленского во благо РОССИИИИИИИИИИИ!!!!!!!</h3>
-                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed.  Laoreet odio dignissim sed. Donec ut vestibulum nisiorbi tincidunt dui diam, at sollicitudin mi consequat at. . Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed...</p>
-                </div>
-                <div class="right flex">
-                  <h3 class="price">
-                    100000 - 150000 Руб
-                  </h3>
-                  <button class="block button one">Посмотреть</button>
-                  <button class="block button two">Отказаться</button>
-                </div>
-              </div>
-              <!-- Конец -->
               <?php
-
+                $arr = getOrderInfoForFreelancer(1);
+                foreach ($arr as $key => $value)
+                {
+                  foreach ($value['orders'] as $k => $v)
+                  {
+                    echo "<div class='card flex'>
+                    <div class='left flex'>";
+                    echo "<h3 class='suka_bliad'>", $v['title'], "</h3>";
+                    echo "<p class='description'>", $v['description'], "</p>";
+                    echo "</div>
+                    <div class='right flex'>";
+                    echo "<h3 class='price'>", $v['priceFrom'], "₽ - ", $v['priceBefore'], "₽</h3>";
+                    echo "<button class='block button one'>Посмотреть</button>
+                    <button class='block button two'>Отказаться</button>
+                    </div>
+                    </div>";
+                  }
+                }
               ?>
+              <!-- Конец -->
             </div>
         </div>
       </div>
@@ -169,7 +175,7 @@ error_reporting(E_ALL);
             </div>
             <div class="content flex">
               <!-- Начало карточки-->
-              <div class="card flex">
+              <!-- <div class="card flex">
                 <div class="left flex">
                   <h3 class="suka_bliad">Убить Зеленского во благо РОССИИИИИИИИИИИ!!!!!!!</h3>
                   <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed.  Laoreet odio dignissim sed. Donec ut vestibulum nisiorbi tincidunt dui diam, at sollicitudin mi consequat at. . Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed...</p>
@@ -181,7 +187,24 @@ error_reporting(E_ALL);
                   <button class="block button one">Посмотреть</button>
                   <button class="block button two">Изменить</button>
                 </div>
-              </div>
+              </div> -->
+              <?php
+                $arr = getOrderInfo(1);
+                foreach ($arr as $elem)
+                {
+                  echo "<div class='card flex'>
+                  <div class='left flex'>";
+                  echo "<h3 class='suka_bliad'>", $elem['title'], "</h3>";
+                  echo "<p class='description'>", $elem['description'], "</p>";
+                  echo "</div>
+                  <div class='right flex'>";
+                  echo "<h3 class='price'>", $elem['priceFrom'], "₽ - ", $v['priceBefore'], "₽</h3>";
+                  echo "<button class='block button one'>Посмотреть</button>
+                  <button class='block button two'>Отказаться</button>
+                  </div>
+                  </div>";
+                }
+              ?>
               <!-- Конец -->
             </div>
         </div>
@@ -200,19 +223,23 @@ error_reporting(E_ALL);
             </div>
             <div class="content flex">
               <!-- Начало карточки-->
-              <div class="card flex">
-                <div class="left flex">
-                  <h3 class="suka_bliad">Убить Зеленского во благо РОССИИИИИИИИИИИ!!!!!!!</h3>
-                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed.  Laoreet odio dignissim sed. Donec ut vestibulum nisiorbi tincidunt dui diam, at sollicitudin mi consequat at. . Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed...</p>
-                </div>
-                <div class="right flex">
-                  <h3 class="price">
-                    100000 - 150000 Руб
-                  </h3>
-                  <button class="block button one">Посмотреть</button>
-                  <button class="block button two">Откликнуться</button>
-                </div>
-              </div>
+              <?php
+                $arr = getOrderInfo(1);
+                foreach ($arr as $elem)
+                {
+                  echo "<div class='card flex'>
+                  <div class='left flex'>";
+                  echo "<h3 class='suka_bliad'>", $elem['title'], "</h3>";
+                  echo "<p class='description'>", $elem['description'], "</p>";
+                  echo "</div>
+                  <div class='right flex'>";
+                  echo "<h3 class='price'>", $elem['priceFrom'], "₽ - ", $v['priceBefore'], "₽</h3>";
+                  echo "<button class='block button one'>Посмотреть</button>
+                  <button class='block button two'>Отказаться</button>
+                  </div>
+                  </div>";
+                }
+              ?>
               <!-- Конец -->
             </div>
         </div>
