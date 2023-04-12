@@ -20,12 +20,12 @@ html {
   --text-color: #515151;
   --white-color: #F9F9F9;
   --blue-color: #3450B2;
-
 }
 
 body {
   color: var(--text-color);
   font: 400 10px/1.5 "Open Sans", sans-serif;
+  min-height: 100%;
 }
 
 .flex {
