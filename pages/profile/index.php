@@ -26,6 +26,7 @@
               <?php
                 $arr = getUserInfo(1);
                 echo "$arr[lastname] $arr[firstname] $arr[surname]";
+                $city = $arr['city'];
               ?>
             </h1>
             <div class="reyting_name">
@@ -37,12 +38,12 @@
                 }
               ?>
             </div>
-            <a id="place" class="flex" href="#">
+            <a id="place" class="flex" href="https://www.google.com/maps/place/<?php echo "$city"?>">
               <img src="img/map-tag.png" class="icon">
               <div>
                 <?php
                   $arr = getUserInfo(1);
-                  echo "$arr[address]";
+                  echo "$arr[city]";
                 ?>
               </div>
             </a>
