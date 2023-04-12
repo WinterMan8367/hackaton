@@ -22,13 +22,16 @@
             var_dump($arr);
             echo "<br><br>";
 
-            // Тест категорий
-            $arr = $db->goResult("
-            SELECT 
-                Name
-            FROM CATEGORY
-            ");
+            echo "<center><h1>Тест функций</h1></center><br>";
+            $arr = getUserCategories(1);
             var_dump($arr);
+            echo "<br><br><center><h1>Тест кода</h1></center><br>";
+
+            $arr = getUserCategories(1);
+            foreach ($arr as $elem)
+            {
+                echo $elem["categoryName"];
+            }
             
         ?>
 	</body>

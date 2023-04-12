@@ -48,7 +48,15 @@
               </div>
             </a>
             <div class="tags flex">
-              <p class="tag" style=" color: #FF6060; background: #FFD3BA;">#Дизайнер</p> <!--Теги с БД Цвет выбирай сам) Можно в бд занести-->
+              <?php
+                $arr = getUserCategories(1);
+                foreach ($arr as $elem)
+                {
+                  echo "<p class='tag' style='color: #FF6060; background: #FFD3BA;'>#";
+                  echo $elem["categoryName"];
+                  echo "</p>";
+                }
+              ?>
             </div>
             <p class="description">
             <?php
