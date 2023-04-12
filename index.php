@@ -99,8 +99,9 @@
                 <p class="tag_category">Дизайнер</p> <!--Теги с БД -->
             </div>
 
+            <!-- Категории для поиска -->
             <div class="container">
-                <div class="o">
+                <div class="block_list_of_freelancers">
                     
                 </div>
             </div>
