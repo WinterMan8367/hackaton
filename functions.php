@@ -64,4 +64,18 @@
         return $arr;
     }
 
+    function getCategories() 
+    {
+        $arr = [];
+        $db = new MysqlModel();
+
+        $arr = $db->goResult("
+            SELECT 
+                Name
+            FROM CATEGORY
+        ");
+
+        return $arr;
+    }
+
 ?>

@@ -21,8 +21,15 @@
             $arr = getUserInfo(1);
             var_dump($arr);
             echo "<br><br>";
-            $arr = getFreelancerRating(1);
+
+            // Тест категорий
+            $arr = $db->goResult("
+            SELECT 
+                Name
+            FROM CATEGORY
+            ");
             var_dump($arr);
+            
         ?>
 	</body>
 </html>

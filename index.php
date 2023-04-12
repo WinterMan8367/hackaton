@@ -99,7 +99,15 @@
 
             <!-- Категории для поиска -->
             <div class="container category_block">
-                <p class="tag_category">Дизайнер</p> <!--Теги с БД -->
+                <?php
+                    $arr = getCategories();
+                    for ($i = 0; $i < 15; $i++)
+                    {
+                        echo "<p class='tag_category'>";
+                        echo $arr[$i]["Name"];
+                        echo "</p>";
+                    }
+                ?>
             </div>
 
             <div class="container">
