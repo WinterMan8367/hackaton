@@ -1,28 +1,34 @@
 <?php
+    require_once('db_model.php');
 
-    function getUserData($userId){
+    function getUserInfo($userId)
+    {
         $arr = [];
+        $db = new MysqlModel();
 
-
-        $db = new Db_Model();
         $arr = $db->goResultOnce("
-
             SELECT 
                 * 
-            FROM USER
+            FROM USERS
             WHERE id = $userId
-
         ");
 
-        $arr['tags'] = $db->goResult("
+        return $arr;
+    }
+
+    function getUserCategories($userId) 
+    {
+        $arr = [];
+        $db = new MysqlModel();
+
+        $arr = $db->goResult("
             SELECT 
                 freelancerId, 
                 categoryId,
-                (SELECT NAME FROM CATEGORIES WHERE ID = categoryId) categoryName
+                (SELECT NAME FROM CATEGORY WHERE ID = categoryId) categoryName
             FROM FREELANCERS_CONN_CATEGORIES
             WHERE freelancerId = $userId
         ");
-
 
         return $arr;
     }
