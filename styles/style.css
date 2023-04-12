@@ -262,6 +262,7 @@ h2.heading {
 
 .tag_category:active {
   background-color: var(--blue-color);
+  color: white;
 }
 
 /* ----------- Категории ----------- */
