@@ -15,7 +15,6 @@
 
 .container {
   max-width: 1270px;
-  margin: 0px auto;
   padding: 0px 10px;
 }
 
@@ -344,7 +343,7 @@ h2.heading {
   display: flex;
 }
 
-.freelancer_card_search h1 {
+.more {
   font-size: 30px;
   color: var(--blue-color);
 }
