@@ -37,9 +37,13 @@
                 <div>
                     <div class="stage_block">
                         <img width="80px" height="80px"src="">
-                        <h2>Заказчик</h2>
-                        <p>Предложите заказ</p>
-
+                        <div>
+                            <div>
+                                <img src="../img/stage_one.png">
+                                <h1>Заказчик</h1>
+                            </div>
+                            <p>Предложите заказ</p>
+                        </div>
                     </div>
                 </div>
             </div>
