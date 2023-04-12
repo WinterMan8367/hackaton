@@ -275,6 +275,7 @@ h2.heading {
   flex-direction: row;
 }
 
+/**/
 .list_freelancers_menu {
   background-color: var(--main-color);
   color: #FFFFFF;
@@ -288,4 +289,22 @@ h2.heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+#right_indent_search_by {
+  margin-right: 10px;
+}
+/**/
+#search_markup_freelance {
+  
+  border-radius: 8px;
+  padding: 2px 16px;
+  display: flex;
+  width: 280px;
+  background-color: white;
+}
+.search_for_freelancers {
+  outline: none;
+  border: none;
+  width: 100%;
 }

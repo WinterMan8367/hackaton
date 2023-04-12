@@ -114,9 +114,12 @@
             <div class="container">
                 <div class="block_list_of_freelancers">
                     <div class="list_freelancers_menu">
-                        <div class="flex">
-                            <p>Искать по:</p>
-                            <input type="text" name="" class="" placeholder="Теги, фрилансеры, работа">
+                        <div class="flex" style="align-items: center;">
+                            <p id="right_indent_search_by">Искать по:</p>
+                            <form id="search_markup_freelance">
+                                <img id="icon_search" src="img/search.png">
+                                <input type="text" name="" class="search_for_freelancers" placeholder="Теги, фрилансеры, работа">
+                            </form>
                         </div>
 
                         <div class="flex">
