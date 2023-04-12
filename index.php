@@ -118,13 +118,13 @@
                             <p id="right_indent_search_by">Искать по:</p>
                             <form id="search_markup_freelance">
                                 <img id="icon_search" src="img/search.png">
-                                <input type="text" name="" class="search_for_freelancers" placeholder="Теги,f фрилансеры, работа">
+                                <input type="text" name="" class="search_for_freelancers" placeholder="Теги, фрилансеры, работа">
                             </form>
                         </div>
 
                         <div class="flex">
                             <p>Сортировка по:</p>
-                            <select>
+                            <select class="sort_by_rating">
                                 <option>Рейтингу</option>
                                 <option>По убыванию</option>
                                 <option>По возрастанию</option>
