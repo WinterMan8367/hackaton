@@ -18,7 +18,7 @@
                 echo
                 "<div class='login flex'>
                   <img class='icon' src='img/user.png'>
-                  <a id='login_link' href='pages/profile/index.php'>";
+                  <a id='login_link' href='/pages/profile/index.php'>";
                 echo $_SESSION['user']['firstname'];
                 echo
                   "</a>
