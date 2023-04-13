@@ -387,7 +387,9 @@ h2.heading {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
+
 #bottom_markup {
   display: flex;
   flex-direction: column;
@@ -415,8 +417,24 @@ h2.heading {
 .description_card {
   color: var(--text-color);
   font-size: 16px;
+  overflow: hidden; /* Обрезаем все, что не помещается в область */
+  text-overflow: ellipsis; /* Добавляем многоточие */
 }
 
+.clip {
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 2;
+  -webkit-line-clamp: 5;
+  line-clamp: 2;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
 
 
 /* О нас */
@@ -508,3 +526,6 @@ details {
 details p {
   font-size: 16px;
 }
+
+
+
