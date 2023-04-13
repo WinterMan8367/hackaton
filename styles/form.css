@@ -86,3 +86,25 @@ div.link:hover {
   max-width: 400px;
   height: 350px;
 }
+
+.windows .textarea {
+  margin: 10px 0px;
+  width: 100%;
+  display: block;
+  background-color: none;
+  text-align: center;
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: 2px solid #4779FB;
+}
+
+.windows select {
+  margin: 10px 0px;
+  width: 100%;
+  display: block;
+  background-color: none;
+  text-align: center;
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: 2px solid #4779FB;
+}
