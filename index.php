@@ -71,10 +71,28 @@
             <form action="" method="POST" id="sdelat_zakaz" class="windows">
                 <h1>Создание заказа</h1>
                 <input type="text" id="name_zakaz" placeholder="Заголовок вашего заказа">
-                <input type="text" id="name_zakaz" placeholder="Подробно опишите свою задачу">
+                <textarea class="textarea" name="desc_zakaz" id="desc_zakaz" cols="100" rows="15"></textarea>
                 <input id="file3" type="file" accept="*" value="Прикрепите ФАЙЛЫ">
+                <select name="kategory" id="kategory">
+                    <option value="1">Дизайнер</option>
+                    <option value="2">Frontend-разработчик</option>
+                    <option value="3">Fullstack-разработчик</option>
+                    <option value="4">Backend-разработчик</option>
+                    <option value="5">JavaScript-разработчик</option>
+                    <option value="6">Психолог</option>
+                    <option value="7">PHP-разработчик</option>
+                    <option value="8">С#-разработчик</option>
+                    <option value="9">Специалист 1С</option>
+                    <option value="10">Python-разработчик</option>
+                    <option value="11">UI/UX-дизайнер</option>
+                    <option value="12">SEO-специалист</option>
+                    <option value="13">Администратор баз данных</option>
+                    <option value="14">Системный администратор</option>
+                    <option value="15">Ведущий программист</option>
+                </select>
                 <input type="text" id="price_zakaz" placeholder="Введите сумму от и до в формате A-B">
-                
+                <input type="date" id="date_zakaz" placeholder="Введите дату выполнения вашего заказа">
+                <input type="submit" class="submit" value="Добавить">
             </form>
         </div>
         <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
@@ -87,7 +105,7 @@
             <div class="container intro">
                 <div class="intro_block">
                     <div class="intro_block_markup">
-                        <h1 onclick="$.fancybox('#info_o_sebe')">Работай с лучшими специалистами</h1>
+                        <h1>Работай с лучшими специалистами</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius.</p>
                         <div class="intro_search_container">
                             <form id="form_intro">
@@ -96,7 +114,7 @@
                             </form>
                         </div>
                         <div class="flex">
-                            <input type="submit" name="#" class="button_blue" id="button_indent"value="Оставить заказ">
+                            <input onclick="$.fancybox('#sdelat_zakaz')" выаtype="submit" name="#" class="button_blue" id="button_indent"value="Оставить заказ">
                             <input type="submit" name="#" class="button_white" value="Найти заказ">
                         </div>
                     </div>
