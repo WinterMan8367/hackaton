@@ -24,6 +24,7 @@ html {
   --text-color: #515151;
   --white-color: #F9F9F9;
   --blue-color: #3450B2;
+  scroll-behavior: smooth;
 }
 
 body {
