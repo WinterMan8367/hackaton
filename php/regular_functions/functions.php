@@ -248,4 +248,31 @@
         return $arr;
     }
 
+    function getLogin($login, $password)
+    {
+        $arr = [];
+        $db = new MysqlModel();
+
+        $arr = $db->goResult("
+            SELECT
+                *
+            FROM
+                USERS
+            WHERE
+                login = '$login'
+                    AND
+                password = '$password'
+        ");
+
+        if (!empty($arr)) {
+            foreach ($arr as $elem) {
+                return $elem;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 ?>

@@ -1,3 +1,9 @@
+<?php
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="ru_RU">
 	<head>
@@ -17,34 +23,50 @@
 
         <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++ Формы -->
         <div style="display: none;">
-            <form id="registration_form" class="windows" action="" method="post">
+            <form id="registration_form" class="windows" action="" method="POST">
                 <h1>Регистрация</h1>
                 <div class="inputs">
                     <div style="display: flex;">
-                        <input id="lastname" type="text" placeholder="Фамилия">
-                        <input id="name" type="text" placeholder="Имя">
+                        <input id="lastname" type="text" name="firstname" placeholder="Фамилия">
+                        <input id="name" type="text" name="name" placeholder="Имя">
                     </div>
-                    <input id="additname" type="text" placeholder="Отчество">
-                    <input id="e-mail" type="text" placeholder="e-mail">
-                    <input id="phone" type="text" placeholder="Телефон">
-                    <input type="text" id="password" placeholder="Пароль">
-                    <input type="text" id="password_1" placeholder="Повторите пароль">
+                    <input id="additname" type="text" name="lastname" placeholder="Отчество">
+                    <input id="e-mail" type="text" name="email" placeholder="e-mail">
+                    <input id="phone" type="text" name="phone" placeholder="Телефон">
+                    <input type="password" id="password" name="password" placeholder="Пароль">
+                    <input type="password" id="password_1" name="password_repeat" placeholder="Повторите пароль">
                     <input class="submit" type="submit" value="Зарегистроваться">
                 </div>
             </form>
 
             <form action="" method="POST" id="login" class="windows">
                 <h1>Войти</h1>
-                <input id="login_pole" type="text" placeholder="Логин">
-                <input id="password_login" type="text" placeholder="Пароль">
+                <input id="login_pole" type="text" name="login" placeholder="Логин">
+                <input id="password_login" type="password" name="password" placeholder="Пароль">
                 <input type="submit" class="submit" value="Войти">
                 <div onclick="$.fancybox('#zabil_parol')" class="link">Забыли пароль?</div>
                 <div onclick="$.fancybox('#registration_form')" class="link">Зарегистрироваться</div>
             </form>
 
+            <?php
+                if (!empty($_POST['password']) and !empty($_POST['login'])) {
+                    $login = $_POST['login'];
+                    $password = $_POST['password'];
+                    
+                    $user = getLogin($login, $password);
+                    
+                    if (!empty($user)) {
+                        $_SESSION['user'] = $user;
+                        var_dump($_SESSION);
+                    } else {
+                        echo "Неверный логин или пароль.";
+                    }
+                }
+            ?>
+
             <form action="" method="POST" id="zabil_parol" class="windows">
                 <h1>Восстановление доступа</h1>
-                <input id="login_pole" type="text" placeholder="Введите свой e-mail">
+                <input id="login_pole" type="e-mail" name="email" placeholder="Введите свой e-mail">
                 <input type="submit" class="submit" value="Продолжить">
                 <p class="context">На почту будет отправлено письмо с ссылкой на восстановление</p>
                 <div onclick="$.fancybox('#login')" class="link">Войти</div>
@@ -141,7 +163,6 @@
                     </div>
                 </div>
             </div>
-
 
             <!-- Сценарный блок -->
             <div class="container stage">
@@ -265,7 +286,7 @@
                                 <a class="city_list_freelancers">г. Москва</a>
 
 
-                                <p class="description_card">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus variusLorem ipsum dolor sit amet, consectetur adipiscing elit...</p> <!-- Здесь инфа из БД -->
+                                <p class="description_card clip">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus variusLorem ipsum dolor sit amet, consectetur adipiscing elit</p> <!-- Здесь инфа из БД -->
                             </div>
                             <div id="bottom_markup_outo" style="min-width: 300px;">
                                 <h1 class="morg">10 000 - 40 000 RUB</h1> <!-- Цена из БД -->
@@ -274,17 +295,16 @@
                             </div>
                         </div>
 
-                        <div class="card flex">
-                            <div class="left flex">
-                                 <h3 class="suka_bliad">Убить Зеленского во благо РОССИИИИИИИИИИИ!!!!!!!</h3>
-                                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed.  Laoreet odio dignissim sed. Donec ut vestibulum nisiorbi tincidunt dui diam, at sollicitudin mi consequat at. . Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed...</p>
+                        <div class="freelancer_card_search">
+                            <!-- Карточка -->
+                            <div id="bottom_markup">
+                                <h1 class="more">Векторные изображения и UI/UX дизайн для мобильной игры</h1><!-- Здесь название из БД -->
+                                <p class="description_card clip">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus variusLorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus, consectetur adipiscing</p> <!-- Здесь инфа из БД -->
                             </div>
-                            <div class="right flex">
-                                <h3 class="price">
-                                    100000 - 150000 Руб
-                                 </h3>
-                                <button class="block button one">Посмотреть</button>
-                                <button class="block button two">Изменить</button>
+                            <divs id="bottom_markup_outo" style="min-width: 300px;">
+                                <h1 class="morg">100 000 - 200 000 RUB</h1> <!-- Цена из БД -->
+                                <input type="submit" name="#" class="button_blue" value="Откликнуться" style="margin-top: 20px;">
+                                <input type="submit" name="#" class="button_white" value="Посмотреть" style="margin-top: 10px;">
                             </div>
                         </div>
                     </div>
