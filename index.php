@@ -114,7 +114,7 @@
                             </form>
                         </div>
                         <div class="flex">
-                            <input onclick="$.fancybox('#sdelat_zakaz')" type="submit" name="#" class="button_blue" id="button_indent"value="Оставить заказ">
+                            <input onclick="$.fancybox('#sdelat_zakaz')" выаtype="submit" name="#" class="button_blue" id="button_indent"value="Оставить заказ">
                             <input type="submit" name="#" class="button_white" value="Найти заказ">
                         </div>
                     </div>
