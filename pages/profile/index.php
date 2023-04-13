@@ -37,15 +37,15 @@
           <div class="right">
             <h1 id="name">
               <?php
-                $arr = getUserInfo(1);
+                $arr = getUserInfo($_SESSION['user']['id']);
                 echo "$arr[lastname] $arr[firstname] $arr[surname]";
                 $city = $arr['city'];
               ?>
             </h1>
             <div class="reyting_name">
               <?php
-                $arr = getFreelancerRating(1);
-                for ($i = 0; $i < round($arr[0]["generalRating"]); $i++)
+                $arr = getFreelancerRating($_SESSION['user']['id']);
+                for ($i = 0; $i < round($arr[0]['generalRating']); $i++)
                 {
                   echo "<img src='img/star.png'>";
                 }
@@ -55,14 +55,14 @@
               <img src="img/map-tag.png" class="icon">
               <div>
                 <?php
-                  $arr = getUserInfo(1);
+                  $arr = getUserInfo($_SESSION['user']['id']);
                   echo "$arr[city]";
                 ?>
               </div>
             </a>
             <div class="tags flex">
               <?php
-                $arr = getUserCategories(1);
+                $arr = getUserCategories($_SESSION['user']['id']);
                 foreach ($arr as $elem)
                 {
                   echo "<p class='tag' style='color: #FF6060; background: #FFD3BA;'>#";
@@ -73,7 +73,7 @@
             </div>
             <p class="description">
             <?php
-                  $arr = getUserInfo(1);
+                  $arr = getUserInfo($_SESSION['user']['id']);
                   echo "$arr[aboutUser]";
                 ?>
             </p>
@@ -100,7 +100,7 @@
             <div class="content flex">
               <!-- Хуйня, которая элемент порфтолио, макет -->
                 <?php
-                  $arr = getPortfolio(1);
+                  $arr = getPortfolio($_SESSION['user']['id']);
                   foreach ($arr as $key => $value)
                   {
                     echo "<div class='portfolio_item'>";
@@ -144,7 +144,7 @@
             <div class="content flex">
               <!-- Начало карточки-->
               <?php
-                $arr = getOrderInfoForFreelancer(1);
+                $arr = getOrderInfoForFreelancer($_SESSION['user']['id']);
                 foreach ($arr as $key => $value)
                 {
                   foreach ($value['orders'] as $k => $v)
@@ -196,7 +196,7 @@
                 </div>
               </div> -->
               <?php
-                $arr = getOrderInfo(1);
+                $arr = getOrderInfo($_SESSION['user']['id']);
                 foreach ($arr as $elem)
                 {
                   echo "<div class='card flex'>
@@ -231,7 +231,7 @@
             <div class="content flex">
               <!-- Начало карточки-->
               <?php
-                $arr = getOrderInfo(1);
+                $arr = getOrderInfo($_SESSION['user']['id']);
                 foreach ($arr as $elem)
                 {
                   echo "<div class='card flex'>
@@ -262,7 +262,7 @@
           <div class="content">
             <!-- Start -->
             <?php
-              $arr = getReviews(1);
+              $arr = getReviews($_SESSION['user']['id']);
               foreach ($arr as $elem)
               {
                 echo "<div class='comm flex'>

@@ -44,17 +44,30 @@
                 <h1>Регистрация</h1>
                 <div class="inputs">
                     <div style="display: flex;">
-                        <input id="lastname" type="text" name="firstname" placeholder="Фамилия">
-                        <input id="name" type="text" name="name" placeholder="Имя">
+                        <input id="lastname" type="text" name="lastname" placeholder="Фамилия">
+                        <input id="name" type="text" name="firstname" placeholder="Имя">
                     </div>
-                    <input id="additname" type="text" name="lastname" placeholder="Отчество">
+                    <input id="additname" type="text" name="surname" placeholder="Отчество">
                     <input id="e-mail" type="text" name="email" placeholder="e-mail">
                     <input id="phone" type="text" name="phone" placeholder="Телефон">
                     <input type="password" id="password" name="password" placeholder="Пароль">
-                    <input type="password" id="password_1" name="password_repeat" placeholder="Повторите пароль">
                     <input class="submit" type="submit" value="Зарегистроваться">
                 </div>
             </form>
+
+            <?php
+                if (!empty($_POST['lastname']) and !empty($_POST['firstname']) and !empty($_POST['surname']) and !empty($_POST['email']) and !empty($_POST['phone']) and !empty($_POST['password']))
+                {
+                    $lastname = $_POST['lastname'];
+                    $firstname = $_POST['firstname'];
+                    $surname = $_POST['surname'];
+                    $email = $_POST['email'];
+                    $phone = $_POST['phone'];
+                    $password = $_POST['password'];
+
+                    $registration = registration($password, $email, $phone, $lastname, $firstname, $surname);
+                }
+            ?>
 
             <form action="" method="POST" id="login" class="windows">
                 <h1>Войти</h1>
@@ -144,6 +157,10 @@
             if (empty($user) and !empty($_POST['password']) and !empty($_POST['login']))
             {
                 echo "<div style='height: 30px; font-size: 16px; background-color: #FF6971; color: white; border: 1px solid #FF6971; border-radius: 5px; margin: 10px 10px 0 10px; padding-left: 10px'>Неверный логин или пароль.</div>";
+            }
+            if (!empty($_POST['lastname']) and !empty($_POST['firstname']) and !empty($_POST['surname']) and !empty($_POST['email']) and !empty($_POST['phone']) and !empty($_POST['password']))
+            {
+                echo "<div style='height: 30px; font-size: 16px; background-color: #A2CF42; color: white; border: 1px solid #A2CF42; border-radius: 5px; margin: 10px 10px 0 10px; padding-left: 10px'>Вы успешно зарегистрировались. Можете зайти через Вход.</div>";
             }
         ?>
         <main>

@@ -291,6 +291,40 @@
             return false;
         }
     }
+    
+    function registration($password, $email, $phone, $lastname, $firstname, $surname)
+    {
+        $db = new MysqlModel();
+
+        $db->goResult("
+            INSERT INTO USERS(
+                id,
+                login,
+                password,
+                email,
+                phone,
+                lastname,
+                firstname,
+                surname,
+                aboutUser,
+                city,
+                isEmployer
+            )
+            VALUES(
+                NULL,
+                '$email',
+                '$password',
+                '$email',
+                '$phone',
+                '$lastname',
+                '$firstname',
+                '$surname',
+                'Привет, я начинающий фрилансер!',
+                'Н/Д',
+                b'0'
+            );
+        ");
+    }
 
     function getOrder()
     {
