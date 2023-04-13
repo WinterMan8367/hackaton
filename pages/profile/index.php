@@ -254,32 +254,65 @@ error_reporting(E_ALL);
           </h2>
           <div class="content">
             <!-- Start -->
-            <div class="comm flex">
-                <div class="left">
-                  <div class="avatar_user" style="background: center/cover url('')">
-                  </div>
-                  <div class="status" style="background: #A2CF42">Доволен</div>
+            <?php
+              $arr = getReviews(1);
+              foreach ($arr as $elem)
+              {
+                echo "<div class='comm flex'>
+                  <div class='left'>
+                    <div class='avatar_user' style='background: center/cover url('')'>
+                    </div>";
+                switch ($elem['rating'])
+                {
+                  case 1:
+                    echo "<div class='status' style='background: red'>Недоволен</div>";
+                    break;
+                  case 2:
+                    echo "<div class='status' style='background: orange'>Плохо</div>";
+                    break;
+                  case 3:
+                    echo "<div class='status' style='background: gold'>Нейтрально</div>";
+                    break;
+                  case 4:
+                    echo "<div class='status' style='background: #A2CF42'>Хорошо</div>";
+                    break;
+                  case 5:
+                    echo "<div class='status' style='background: lime'>Доволен</div>";
+                    break;
+                }
+                echo "</div>
+                <div class='right flex'>
+                <div class='top flex'>
+                <div class='left'>
+                <h3 class='suka_bliad'>",
+                $elem['lastname'] . " " . $elem['firstname'] . " " . $elem['surname'],
+                "</h3>
                 </div>
-                <div class="right flex">
-                  <div class="top flex">
-                    <div class="left">
-                      <h3 class="suka_bliad">Иванов Иван Иванович</h3>
-                    </div>
-                    <div class="right">
-                      <div class="reyting flex">
-                        <img src='img/star.png'>
-                        <img src='img/starempty.png'>
-                        <img src='img/starempty.png'>
-                        <img src='img/starempty.png'>
-                        <img src='img/starempty.png'>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="bottom">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius. Dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum...</p>
-                  </div>
+                <div class='right'>
+                <div class='reyting flex'>";
+                for ($i = 1; $i <= 5; $i++)
+                {
+                  if ($i <= $elem['rating'])
+                  {
+                    echo "<img src='img/star.png'>";
+                  }
+                  else
+                  {
+                    echo "<img src='img/starempty.png'>";
+                  }
+                }
+                echo "</div>
                 </div>
-            </div>
+                </div>
+                <div class='bottom'>
+                <p>",
+                $elem['description'],
+                "</p>
+                </div>
+                </div>
+                </div>";
+              }
+            ?>
             <!-- End -->
           </div>
         </div>

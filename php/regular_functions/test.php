@@ -13,24 +13,10 @@
 	</head>
 	<body>
 		<?php
-            echo "sus<br>";
-            $db = new MysqlModel();
-            $db->goResult("SELECT * FROM USERS");
-            $arr = $db->goResult("SELECT * FROM USERS");
-            var_dump($arr);
-            echo "<br>sus2<br><br>";
-            $arr = getUserInfo(1);
-            var_dump($arr);
-            echo "<br><br>";
-
             echo "<center><h1>Тест функций</h1></center><br>";
             $arr = getPortfolio(1);
             print_r($arr);
             echo "<br><br><center><h1>Тест кода</h1></center><br>";
-
-            $arr = getPortfolio(1);
-            echo test($arr);
-            echo "<hr>";
 
             $arr = getReviews(1);
             echo test($arr);
