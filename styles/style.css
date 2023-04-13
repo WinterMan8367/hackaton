@@ -24,6 +24,7 @@ html {
   --text-color: #515151;
   --white-color: #F9F9F9;
   --blue-color: #3450B2;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -387,7 +388,6 @@ h2.heading {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
 }
 
 #bottom_markup {
@@ -395,6 +395,7 @@ h2.heading {
   flex-direction: column;
   align-items: flex-start;
   margin-left: 20px;
+  width: 100%;
 }
 
 .photo_freelancers {

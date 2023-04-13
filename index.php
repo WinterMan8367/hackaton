@@ -159,8 +159,9 @@
                             </form>
                         </div>
                         <div class="flex">
-                            <input onclick="$.fancybox('#sdelat_zakaz')" type="submit" name="#" class="button_blue" id="button_indent"value="Оставить заказ">
-                            <input type="submit" name="#" class="button_white" value="Найти заказ">
+                            <input onclick="$.fancybox('#sdelat_zakaz')" type="submit" name="#" class="button_blue" id="button_indent" value="Оставить заказ">
+
+                            <a href="#list_of_freelancers"><input type="submit" name="#" class="button_white" value="Найти заказ"></a>
                         </div>
                     </div>
                     <div class="intro_block_markup block">
@@ -243,7 +244,7 @@
 
             <!-- Блок списка фрилансеров -->
             <div class="container">
-                <div class="block_list_of_freelancers">
+                <div class="block_list_of_freelancers" id="list_of_freelancers">
                     <div class="list_freelancers_menu">
                         <div class="flex" style="align-items: center;">
                             <p id="right_indent_search_by">Искать по:</p>
