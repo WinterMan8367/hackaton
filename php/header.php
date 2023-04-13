@@ -20,18 +20,18 @@
                   <img class='icon' src='img/user.png'>
                   <a id='login_link' href='pages/profile/index.php'>";
                 echo $_SESSION['user']['firstname'];
-                echo 
+                echo
                   "</a>
                 </div>";
               }
               else
               {
-                echo
-                "<div onclick='$.fancybox('#registration_form')' class='registration flex'>
+                echo 
+                "<div onclick=", "$.fancybox('#registration_form')", " class='registration flex'>
                   <img class='icon' src='img/user_add.png'>
                   <a id='registration_link' href='#'>Регистрация</a>
                 </div>
-                <div onclick='$.fancybox('#login')' class='login flex'>
+                <div onclick=", "$.fancybox('#login')", " class='login flex'>
                   <img class='icon' src='img/user.png'>
                   <a id='login_link' href='#'>Войти</a>
                 </div>";
