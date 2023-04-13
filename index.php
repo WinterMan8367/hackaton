@@ -161,7 +161,7 @@
                         <div class="flex">
                             <input onclick="$.fancybox('#sdelat_zakaz')" type="submit" name="#" class="button_blue" id="button_indent" value="Оставить заказ">
 
-                            <a href="#block_list_of_freelancers"><input type="submit" name="#" class="button_white" value="Найти заказ"></a>
+                            <a href="#list_of_freelancers"><input type="submit" name="#" class="button_white" value="Найти заказ"></a>
                         </div>
                     </div>
                     <div class="intro_block_markup block">
