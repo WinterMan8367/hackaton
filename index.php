@@ -229,7 +229,7 @@
                                 <a class="city_list_freelancers">г. Москва</a>
 
 
-                                <p class="description_card">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus variusLorem ipsum dolor sit amet, consectetur adipiscing elit...</p> <!-- Здесь инфа из БД -->
+                                <p class="description_card clip">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus variusLorem ipsum dolor sit amet, consectetur adipiscing elit</p> <!-- Здесь инфа из БД -->
                             </div>
                             <div id="bottom_markup_outo" style="min-width: 300px;">
                                 <h1 class="morg">10 000 - 40 000 RUB</h1> <!-- Цена из БД -->
@@ -238,17 +238,16 @@
                             </div>
                         </div>
 
-                        <div class="card flex">
-                            <div class="left flex">
-                                 <h3 class="suka_bliad">Убить Зеленского во благо РОССИИИИИИИИИИИ!!!!!!!</h3>
-                                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed.  Laoreet odio dignissim sed. Donec ut vestibulum nisiorbi tincidunt dui diam, at sollicitudin mi consequat at. . Etiam venenatis ac eros maximus varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed...</p>
+                        <div class="freelancer_card_search">
+                            <!-- Карточка -->
+                            <div id="bottom_markup">
+                                <h1 class="more">Векторные изображения и UI/UX дизайн для мобильной игры</h1><!-- Здесь название из БД -->
+                                <p class="description_card clip">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus variusLorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus, consectetur adipiscing</p> <!-- Здесь инфа из БД -->
                             </div>
-                            <div class="right flex">
-                                <h3 class="price">
-                                    100000 - 150000 Руб
-                                 </h3>
-                                <button class="block button one">Посмотреть</button>
-                                <button class="block button two">Изменить</button>
+                            <divs id="bottom_markup_outo" style="min-width: 300px;">
+                                <h1 class="morg">10 000 - 40 000 RUB</h1> <!-- Цена из БД -->
+                                <input type="submit" name="#" class="button_blue" value="Откликнуться" style="margin-top: 20px;">
+                                <input type="submit" name="#" class="button_white" value="Посмотреть" style="margin-top: 10px;">
                             </div>
                         </div>
                     </div>
