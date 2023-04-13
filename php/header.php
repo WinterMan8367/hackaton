@@ -8,36 +8,33 @@
 					<div class='container'>
 						<div class='inner flex'>
               <div class='left flex'>
-                <a class='logo block' href='https://'></a>
+                <a class='logo block' href='/index.php'></a>
                 <a href='#'>Найти заказы</a>
                 <a href='#'>Найти фрилансера</a>
               </div>
               <div class='right flex'>";
               if (!empty($_SESSION['user']))
               {
-                echo <<<HTML
-                <div class='login flex'>
+                echo
+                "<div class='login flex'>
                   <img class='icon' src='img/user.png'>
-                  <a id='login_link' href='pages/profile/index.php'>"
-                    HTML;
+                  <a id='login_link' href='pages/profile/index.php'>";
                 echo $_SESSION['user']['firstname'];
-                echo <<<HTML
-                  </a>
-                </div>
-                HTML;
+                echo
+                  "</a>
+                </div>";
               }
               else
               {
-                echo <<<HTML
-                <div onclick='$.fancybox('#registration_form')' class='registration flex'>
+                echo 
+                "<div onclick=", "$.fancybox('#registration_form')", " class='registration flex'>
                   <img class='icon' src='img/user_add.png'>
                   <a id='registration_link' href='#'>Регистрация</a>
                 </div>
-                <div onclick="$.fancybox('#login')" class='login flex'>
+                <div onclick=", "$.fancybox('#login')", " class='login flex'>
                   <img class='icon' src='img/user.png'>
                   <a id='login_link' href='#'>Войти</a>
-                </div>
-                HTML;
+                </div>";
               }
     echo
               "</div>
