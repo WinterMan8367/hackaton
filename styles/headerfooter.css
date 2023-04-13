@@ -96,3 +96,13 @@
   justify-content: center;
   margin: 8px 0px 3px;
 }
+
+#log_out {
+  background: var(--main-color);
+  width: 100px;
+  height: 40px;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  margin-top: 15px;
+}
