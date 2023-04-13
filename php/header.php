@@ -17,6 +17,9 @@
               {
                 echo
                 "<div class='login flex'>
+                  <form action='' method='GET'>
+                    <button id='log_out' name='logout' type='submit' value='1'>Выйти из акка</button>
+                  </form>
                   <img class='icon' src='img/user.png'>
                   <a id='login_link' href='/pages/profile/index.php'>";
                 echo $_SESSION['user']['firstname'];

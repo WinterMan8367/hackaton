@@ -1,5 +1,10 @@
 <?php
   session_start();
+  if (!empty($_GET['logout']))
+  {
+    session_destroy();
+    header("Location: http://localhost/index.php");
+  }
 ?>
 <!DOCTYPE html>
 <html lang="ru_RU">

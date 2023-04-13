@@ -37,7 +37,6 @@
             <p class='text'>Контакты: 8 (123) 456-78-90</p>
             <p class='text'>E-mail: <span style='text-decoration: underline;'>Lanse000@mail.ru</span></p>
             <p class='text'>График: Понедельник - Пятница, 08:00-19:00</p>
-            <button id='log_out'>Выйти из акка</button>
           </div>
           <div class='right'>
           <iframe id='footer_map' src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12635.766365972051!2d86.00099149134522!3d55.38943296858643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1681261014250!5m2!1sru!2sru' 
