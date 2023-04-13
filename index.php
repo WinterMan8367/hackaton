@@ -1,3 +1,9 @@
+<?php
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="ru_RU">
 	<head>
@@ -17,34 +23,50 @@
 
         <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++ Формы -->
         <div style="display: none;">
-            <form id="registration_form" class="windows" action="" method="post">
+            <form id="registration_form" class="windows" action="" method="POST">
                 <h1>Регистрация</h1>
                 <div class="inputs">
                     <div style="display: flex;">
-                        <input id="lastname" type="text" placeholder="Фамилия">
-                        <input id="name" type="text" placeholder="Имя">
+                        <input id="lastname" type="text" name="firstname" placeholder="Фамилия">
+                        <input id="name" type="text" name="name" placeholder="Имя">
                     </div>
-                    <input id="additname" type="text" placeholder="Отчество">
-                    <input id="e-mail" type="text" placeholder="e-mail">
-                    <input id="phone" type="text" placeholder="Телефон">
-                    <input type="text" id="password" placeholder="Пароль">
-                    <input type="text" id="password_1" placeholder="Повторите пароль">
+                    <input id="additname" type="text" name="lastname" placeholder="Отчество">
+                    <input id="e-mail" type="text" name="email" placeholder="e-mail">
+                    <input id="phone" type="text" name="phone" placeholder="Телефон">
+                    <input type="password" id="password" name="password" placeholder="Пароль">
+                    <input type="password" id="password_1" name="password_repeat" placeholder="Повторите пароль">
                     <input class="submit" type="submit" value="Зарегистроваться">
                 </div>
             </form>
 
             <form action="" method="POST" id="login" class="windows">
                 <h1>Войти</h1>
-                <input id="login_pole" type="text" placeholder="Логин">
-                <input id="password_login" type="text" placeholder="Пароль">
+                <input id="login_pole" type="text" name="login" placeholder="Логин">
+                <input id="password_login" type="password" name="password" placeholder="Пароль">
                 <input type="submit" class="submit" value="Войти">
                 <div onclick="$.fancybox('#zabil_parol')" class="link">Забыли пароль?</div>
                 <div onclick="$.fancybox('#registration_form')" class="link">Зарегистрироваться</div>
             </form>
 
+            <?php
+                if (!empty($_POST['password']) and !empty($_POST['login'])) {
+                    $login = $_POST['login'];
+                    $password = $_POST['password'];
+                    
+                    $user = getLogin($login, $password);
+                    
+                    if (!empty($user)) {
+                        $_SESSION['user'] = $user;
+                        var_dump($_SESSION);
+                    } else {
+                        echo "Неверный логин или пароль.";
+                    }
+                }
+            ?>
+
             <form action="" method="POST" id="zabil_parol" class="windows">
                 <h1>Восстановление доступа</h1>
-                <input id="login_pole" type="text" placeholder="Введите свой e-mail">
+                <input id="login_pole" type="e-mail" name="email" placeholder="Введите свой e-mail">
                 <input type="submit" class="submit" value="Продолжить">
                 <p class="context">На почту будет отправлено письмо с ссылкой на восстановление</p>
                 <div onclick="$.fancybox('#login')" class="link">Войти</div>
@@ -105,7 +127,6 @@
                     </div>
                 </div>
             </div>
-
 
             <!-- Сценарный блок -->
             <div class="container stage">

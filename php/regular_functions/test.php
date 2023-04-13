@@ -20,6 +20,12 @@
 
             $arr = getReviews(1);
             echo test($arr);
+            echo "<hr>";
+
+            $login = "admin";
+            $password = "qwerty12Q";
+            $arr = getLogin($login, $password);
+            var_dump(!empty($_SESSION['user']));
         ?>
 	</body>
 </html>
