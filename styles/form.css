@@ -95,6 +95,7 @@ div.link:hover {
   text-align: center;
   padding: 4px 10px;
   border-radius: 8px;
+  height: 200px;
   border: 2px solid #4779FB;
 }
 
@@ -107,4 +108,13 @@ div.link:hover {
   padding: 4px 10px;
   border-radius: 8px;
   border: 2px solid #4779FB;
+}
+
+#info_o_sebe {
+  width: 600px;
+  height: 600px;
+  background: #F0F0F0;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  padding: 0px 40px 30px;
 }
