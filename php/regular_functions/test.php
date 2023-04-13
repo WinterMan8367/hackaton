@@ -22,7 +22,7 @@
             echo test($arr);
             echo "<hr>";
 
-            var_dump($_SESSION);
+            echo test(getOrder());
         ?>
 	</body>
 </html>

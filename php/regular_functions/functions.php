@@ -275,4 +275,55 @@
         }
     }
 
+    function getOrder()
+    {
+        $arr = [];
+        $db = new MysqlModel();
+
+        $arr = $db->goResult("
+            SELECT
+                ORDER_.id AS id,
+                title,
+                description,
+                statusId,
+                priceFrom,
+                priceBefore,
+                address,
+                deadline,
+                lastname,
+                firstname,
+                surname
+            FROM
+                ORDER_, EMPLOYERS, USERS
+            WHERE
+                employerId = EMPLOYERS.id AND EMPLOYERS.id = USERS.id
+        ");
+
+        return $arr;
+    }
+
+    function getOrderCategories($id) 
+    {
+        $arr = [];
+        $db = new MysqlModel();
+
+        $arr = $db->goResult("
+            SELECT
+                (
+                SELECT
+                    NAME
+                FROM
+                    CATEGORY
+                WHERE
+                    id = categoryId
+                ) categoryName
+            FROM
+                ORDER_CONN_CATEGORIES
+            WHERE
+                orderId = $id
+        ");
+
+        return $arr;
+    }
+
 ?>

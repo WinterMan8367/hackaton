@@ -27,6 +27,18 @@
     </head>
 
         <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++ Формы -->
+        <?php
+            if (!empty($_POST['password']) and !empty($_POST['login'])) {
+                $login = $_POST['login'];
+                $password = $_POST['password'];
+                    
+                $user = getLogin($login, $password);
+                if (!empty($user))
+                {
+                    $_SESSION['user'] = $user;
+                }
+            }
+        ?>
         <div style="display: none;">
             <form id="registration_form" class="windows" action="" method="POST">
                 <h1>Регистрация</h1>
@@ -52,22 +64,6 @@
                 <div onclick="$.fancybox('#zabil_parol')" class="link">Забыли пароль?</div>
                 <div onclick="$.fancybox('#registration_form')" class="link">Зарегистрироваться</div>
             </form>
-
-            <?php
-                if (!empty($_POST['password']) and !empty($_POST['login'])) {
-                    $login = $_POST['login'];
-                    $password = $_POST['password'];
-                    
-                    $user = getLogin($login, $password);
-                    
-                    if (!empty($user)) {
-                        $_SESSION['user'] = $user;
-                        var_dump($_SESSION);
-                    } else {
-                        echo "Неверный логин или пароль.";
-                    }
-                }
-            ?>
 
             <form action="" method="POST" id="zabil_parol" class="windows">
                 <h1>Восстановление доступа</h1>
@@ -145,6 +141,10 @@
     <body>
         <?php
             require_once('php/header.php');
+            if (empty($user) and !empty($_POST['password']) and !empty($_POST['login']))
+            {
+                echo "<div style='height: 30px; font-size: 16px; background-color: #FF6971; color: white; border: 1px solid #FF6971; border-radius: 5px; margin: 10px 10px 0 10px; padding-left: 10px'>Неверный логин или пароль.</div>";
+            }
         ?>
         <main>
             <div class="container intro">
@@ -285,33 +285,55 @@
 
                             <!-- Карточка -->
                             <div id="bottom_markup">
-                                <h1 class="more">Коваленко Михаил Алексеевич</h1><!-- Здесь ФИО из БД -->
-                                <p class="tag_list" style="color: #FF6060; background: #FFD3BA;">#Дизайнер</p> <!-- Здесь Тег из БД -->
+                                <h1 class="more">Коваленко Михаил Алексеевич</h1>
+                                <p class="tag_list" style="color: #FF6060; background: #FFD3BA;">#Дизайнер</p>
 
                                 <a class="city_list_freelancers">г. Москва</a>
 
 
-                                <p class="description_card clip">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus variusLorem ipsum dolor sit amet, consectetur adipiscing elit</p> <!-- Здесь инфа из БД -->
+                                <p class="description_card clip">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus variusLorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                             </div>
                             <div id="bottom_markup_outo" style="min-width: 300px;">
-                                <h1 class="morg">10 000 - 40 000 RUB</h1> <!-- Цена из БД -->
+                                <h1 class="morg">10 000 - 40 000 RUB</h1>
                                 <input type="submit" name="#" class="button_blue" value="Оставить заказ" style="margin-top: 20px;">
                                 <input type="submit" name="#" class="button_white" value="Подробнее" style="margin-top: 10px;">
                             </div>
                         </div>
 
-                        <div class="freelancer_card_search">
+                        <!-- <div class="freelancer_card_search"> -->
                             <!-- Карточка -->
-                            <div id="bottom_markup">
-                                <h1 class="more">Векторные изображения и UI/UX дизайн для мобильной игры</h1><!-- Здесь название из БД -->
-                                <p class="description_card clip">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus variusLorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus, consectetur adipiscing</p> <!-- Здесь инфа из БД -->
+                            <!-- <div id="bottom_markup">
+                                <h1 class="more">Векторные изображения и UI/UX дизайн для мобильной игры</h1>
+                                <p class="description_card clip">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus variusLorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus, consectetur adipiscing</p>
                             </div>
-                            <divs id="bottom_markup_outo" style="min-width: 300px;">
-                                <h1 class="morg">100 000 - 200 000 RUB</h1> <!-- Цена из БД -->
+                            <div id="bottom_markup_outo" style="min-width: 300px;">
+                                <h1 class="morg">100 000 - 200 000 RUB</h1>
                                 <input type="submit" name="#" class="button_blue" value="Откликнуться" style="margin-top: 20px;">
                                 <input type="submit" name="#" class="button_white" value="Посмотреть" style="margin-top: 10px;">
-                            </div>
-                        </div>
+                            </div> -->
+                            <?php
+                                $arr = getOrder();
+                                foreach ($arr as $elem)
+                                {
+                                    echo "<div class='freelancer_card_search'>";
+                                    echo "<div id='bottom_markup'>";
+                                    echo "<h1 class='more'>", $elem['title'], "</h1>";
+                                    // $order = getOrderCategories($elem['id']);
+                                    // foreach ($order as $order_elem)
+                                    // {
+                                    //     echo "<p class='tag_list' style='color: #FF6060; background: #FFD3BA;'>";
+                                    //     echo $order_elem['categoryName'];
+                                    //     echo "</p>";
+                                    // }
+                                    echo "<p class='description_card clip'>", $elem['description'], "</p></div>";
+                                    echo "<div id='bottom_markup_outo' style='min-width: 300px;'>";
+                                    echo "<h1 class='morg'>", $elem['priceFrom'], "₽ - ", $elem['priceBefore'], "₽</h1>";
+                                    echo "<input type='submit' name='#' class='button_blue' value='Откликнуться' style='margin-top: 20px;'>
+                                    <input type='submit' name='#' class='button_white' value='Посмотреть' style='margin-top: 10px;'>
+                                </div></div>";
+                                }
+                            ?>
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>
