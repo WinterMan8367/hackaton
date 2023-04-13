@@ -16,7 +16,8 @@
               if (!empty($_SESSION['user']))
               {
                 echo
-                "<div class='login flex'>
+                "<a href='#'><img src='img/bell.png'></a>
+                <div class='login flex'>
                   <form action='' method='GET'>
                     <button id='log_out' name='logout' type='submit' value='1'>Выйти из акка</button>
                   </form>
