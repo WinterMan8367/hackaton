@@ -263,7 +263,7 @@
                                 <p class="description_card clip">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus variusLorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus, consectetur adipiscing</p> <!-- Здесь инфа из БД -->
                             </div>
                             <divs id="bottom_markup_outo" style="min-width: 300px;">
-                                <h1 class="morg">10 000 - 40 000 RUB</h1> <!-- Цена из БД -->
+                                <h1 class="morg">100 000 - 200 000 RUB</h1> <!-- Цена из БД -->
                                 <input type="submit" name="#" class="button_blue" value="Откликнуться" style="margin-top: 20px;">
                                 <input type="submit" name="#" class="button_white" value="Посмотреть" style="margin-top: 10px;">
                             </div>
