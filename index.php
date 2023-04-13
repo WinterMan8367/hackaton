@@ -349,7 +349,7 @@
                     <div class="video_block">
                         <div class="flex" style="width: 100%; justify-content: space-between;">
                             <h1>Видео</h1>
-                            <img src="../img/lanse_img_video.png" alt="Заебали вы меня">
+                            <img src="../img/bell.png">
                         </div>
                         <div class="video">Говно видео</div>
                     </div>

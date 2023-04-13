@@ -16,7 +16,8 @@
               if (!empty($_SESSION['user']))
               {
                 echo
-                "<div class='login flex'>
+                "<div><a href='#'><img src='bell.png'></a></div>
+                <div class='login flex'>
                   <form action='' method='GET'>
                     <button id='log_out' name='logout' type='submit' value='1'>Выйти из акка</button>
                   </form>
@@ -31,7 +32,7 @@
               {
                 echo 
                 "<div onclick=", "$.fancybox('#registration_form')", " class='registration flex'>
-                  <img class='icon' src='img/user_add.png'>
+                  <img class='icon' src='img/bell.png'>
                   <a id='registration_link' href='#'>Регистрация</a>
                 </div>
                 <div onclick=", "$.fancybox('#login')", " class='login flex'>
