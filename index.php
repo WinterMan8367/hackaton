@@ -161,7 +161,7 @@
                         <div class="flex">
                             <input onclick="$.fancybox('#sdelat_zakaz')" type="submit" name="#" class="button_blue" id="button_indent" value="Оставить заказ">
 
-                            <a href="#list_of_freelancers"><input type="submit" name="#" class="button_white" value="Найти заказ"></a>
+                            <a href="#block_list_of_freelancers"><input type="submit" name="#" class="button_white" value="Найти заказ"></a>
                         </div>
                     </div>
                     <div class="intro_block_markup block">
@@ -268,7 +268,10 @@
                     <span id="line"></span>
 
                     <div class="list_freelancers_scrolling">
-                        <!-- <div class="freelancer_card_search">
+
+                        <!--------- Полная карточка Фрилансера ----------->
+                        <div class="freelancer_card_search">
+                            <!-- Фото внутри карточки -->
                             <div id="bottom_markup_photo">
                                 <div class="photo_freelancers">
                                     <img src="../img/user_photo.png" >
@@ -282,10 +285,10 @@
                                         }
                                     ?>
                                 </div>
-                            </div> -->
+                            </div>
 
-                            <!-- Карточка -->
-                            <!-- <div id="bottom_markup">
+                            <!-- Инфа внутри карточки -->
+                            <div id="bottom_markup">
                                 <h1 class="more">Коваленко Михаил Алексеевич</h1>
                                 <p class="tag_list" style="color: #FF6060; background: #FFD3BA;">#Дизайнер</p>
 
@@ -295,48 +298,16 @@
                                 <p class="description_card clip">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus variusLorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                             </div>
                             <div id="bottom_markup_outo" style="min-width: 300px;">
+                                <h1 class="morg">10 000 - 40 000 RUB</h1>
                                 <input type="submit" name="#" class="button_blue" value="Оставить заказ" style="margin-top: 20px;">
                                 <input type="submit" name="#" class="button_white" value="Подробнее" style="margin-top: 10px;">
-                            </div> -->
-                            <?php
-                                $arr = getAllFreelancerInfo();
-                                foreach ($arr as $elem)
-                                {
-                                    echo 
-                                    "<div class='freelancer_card_search'>
-                                        <div id='bottom_markup_photo'>
-                                            <div class='photo_freelancers'>
-                                                <img src='../img/user_photo.png'>
-                                            </div>
-                                            <div class='reyting_name'>";
-                                    $rating = getFreelancerRating($elem['id']);
-                                    for ($i = 0; $i < round($rating[$elem['id']]["generalRating"]); $i++)
-                                    {
-                                        echo "<img src='pages\profile\img\star.png' style='width: 24px; margin: 1px'>";
-                                    }
-                                    echo "</div>
-                                        </div>";
-                                    echo "<div id='bottom_markup'>";
-                                    echo "<h1 class='more'>", $elem['lastname'] . " " . $elem['firstname'] . " " . $elem['surname'], "</h1>";
-                                    $user_categories = getUserCategories($elem['id']);
-                                    foreach ($user_categories as $categories_elem)
-                                    {
-                                        echo "<p class='tag_list' style='color: #FF6060; background: #FFD3BA;'>", $categories_elem['categoryName'], "</p>";
-                                    }
-                                    echo "<a class='city_list_freelancers'>", $elem['city'], "</a>";
-                                    echo "<p class='description_card clip'>", $elem['description'], "</p>";
-                                    echo
-                                        "<div id='bottom_markup_outo' style='min-width: 300px;'>
-                                        <input type='submit' name='#' class='button_blue' value='Оставить заказ' style='margin-top: 20px;'>
-                                        <input type='submit' name='#' class='button_white' value='Подробнее' style='margin-top: 10px;'>
-                                    </div>";
-                                }
-                            ?>
+                            </div>
                         </div>
 
-                        <!-- <div class="freelancer_card_search"> -->
+                        <!--------- Полная карточка Заказа ----------->
+                        <div class="freelancer_card_search">
                             <!-- Карточка -->
-                            <!-- <div id="bottom_markup">
+                            <<div id="bottom_markup">
                                 <h1 class="more">Векторные изображения и UI/UX дизайн для мобильной игры</h1>
                                 <p class="description_card clip">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus variusLorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra arcu ipsum, vitae laoreet odio dignissim sed. Donec ut vestibulum nisi. Nam quis mi tristique, placerat mi eu, efficitur nunc. Morbi tincidunt dui diam, at sollicitudin mi consequat at. Etiam venenatis ac eros maximus, consectetur adipiscing</p>
                             </div>
@@ -344,14 +315,23 @@
                                 <h1 class="morg">100 000 - 200 000 RUB</h1>
                                 <input type="submit" name="#" class="button_blue" value="Откликнуться" style="margin-top: 20px;">
                                 <input type="submit" name="#" class="button_white" value="Посмотреть" style="margin-top: 10px;">
-                            </div> -->
-                            <?php
+                            </div>
+                        </div>
+
+                        <?php
                                 $arr = getOrder();
                                 foreach ($arr as $elem)
                                 {
                                     echo "<div class='freelancer_card_search'>";
                                     echo "<div id='bottom_markup'>";
                                     echo "<h1 class='more'>", $elem['title'], "</h1>";
+                                    // $order = getOrderCategories($elem['id']);
+                                    // foreach ($order as $order_elem)
+                                    // {
+                                    //     echo "<p class='tag_list' style='color: #FF6060; background: #FFD3BA;'>";
+                                    //     echo $order_elem['categoryName'];
+                                    //     echo "</p>";
+                                    // }
                                     echo "<p class='description_card clip'>", $elem['description'], "</p></div>";
                                     echo "<div id='bottom_markup_outo' style='min-width: 300px;'>";
                                     echo "<h1 class='morg'>", $elem['priceFrom'], "₽ - ", $elem['priceBefore'], "₽</h1>";
@@ -359,8 +339,7 @@
                                     <input type='submit' name='#' class='button_white' value='Посмотреть' style='margin-top: 10px;'>
                                 </div></div>";
                                 }
-                            ?>
-                        <!-- </div> -->
+                        ?>
                     </div>
                 </div>
             </div>
