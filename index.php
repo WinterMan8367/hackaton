@@ -319,26 +319,26 @@
                         </div>
 
                         <?php
-                                $arr = getOrder();
-                                foreach ($arr as $elem)
-                                {
-                                    echo "<div class='freelancer_card_search'>";
-                                    echo "<div id='bottom_markup'>";
-                                    echo "<h1 class='more'>", $elem['title'], "</h1>";
-                                    // $order = getOrderCategories($elem['id']);
-                                    // foreach ($order as $order_elem)
-                                    // {
-                                    //     echo "<p class='tag_list' style='color: #FF6060; background: #FFD3BA;'>";
-                                    //     echo $order_elem['categoryName'];
-                                    //     echo "</p>";
-                                    // }
-                                    echo "<p class='description_card clip'>", $elem['description'], "</p></div>";
-                                    echo "<div id='bottom_markup_outo' style='min-width: 300px;'>";
-                                    echo "<h1 class='morg'>", $elem['priceFrom'], "₽ - ", $elem['priceBefore'], "₽</h1>";
-                                    echo "<input type='submit' name='#' class='button_blue' value='Откликнуться' style='margin-top: 20px;'>
-                                    <input type='submit' name='#' class='button_white' value='Посмотреть' style='margin-top: 10px;'>
-                                </div></div>";
-                                }
+                            $arr = getOrder();
+                            foreach ($arr as $elem)
+                            {
+                                echo "<div class='freelancer_card_search'>";
+                                echo "<div id='bottom_markup'>";
+                                echo "<h1 class='more'>", $elem['title'], "</h1>";
+                                // $order = getOrderCategories($elem['id']);
+                                // foreach ($order as $order_elem)
+                                // {
+                                //     echo "<p class='tag_list' style='color: #FF6060; background: #FFD3BA;'>";
+                                //     echo $order_elem['categoryName'];
+                                //     echo "</p>";
+                                // }
+                                echo "<p class='description_card clip'>", $elem['description'], "</p></div>";
+                                echo "<div id='bottom_markup_outo' style='min-width: 300px;'>";
+                                echo "<h1 class='morg'>", $elem['priceFrom'], "₽ - ", $elem['priceBefore'], "₽</h1>";
+                                echo "<input type='submit' name='#' class='button_blue' value='Откликнуться' style='margin-top: 20px;'>
+                                <input type='submit' name='#' class='button_white' value='Посмотреть' style='margin-top: 10px;'>
+                            </div></div>";
+                            }
                         ?>
                     </div>
                 </div>
