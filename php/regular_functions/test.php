@@ -22,7 +22,8 @@
             echo test($arr);
             echo "<hr>";
 
-            echo test(getOrder());
+            $arr = getAllFreelancerInfo();
+            echo test($arr);
         ?>
 	</body>
 </html>

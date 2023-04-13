@@ -72,6 +72,23 @@
         return $arr;
     }
 
+    function getAllFreelancerInfo()
+    {
+        $arr = [];
+        $db = new MysqlModel();
+
+        $arr = $db->goResult("
+            SELECT 
+                * 
+            FROM
+                USERS
+            WHERE
+                isEmployer = 0
+        ");
+
+        return $arr;
+    }
+
     function getUserCategories($userId) 
     {
         $arr = [];
