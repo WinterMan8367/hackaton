@@ -228,28 +228,21 @@
         $arr = [];
         $db = new MysqlModel();
 
-        $arr['user'] = $db->goResult("
+        $arr = $db->goResult("
             SELECT
-                *,
-            (
-            SELECT
-                id
+                USERS_REVIEWS.id,
+                authorId,
+                userId,
+                orderId,
+                description,
+                rating,
+                lastname,
+                firstname,
+                surname
             FROM
-                USERS_REVIEWS
+                USERS_REVIEWS, USERS_REVIEWS_CONN_RECIPIENT, USERS
             WHERE
-                id = reviewsId
-            ) review
-            FROM
-                USERS_REVIEWS_CONN_RECIPIENT
-            WHERE
-                userId = $userId;
-        ");
-
-        $arr['review'] = $db->goResult("
-            SELECT
-                *
-            FROM
-                USERS_REVIEWS
+                reviewsId = USERS_REVIEWS.id AND userId = $userId AND userId = USERS.id
         ");
 
         return $arr;
