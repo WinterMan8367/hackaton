@@ -8,7 +8,7 @@
 					<div class='container'>
 						<div class='inner flex'>
               <div class='left flex'>
-                <a class='logo block' href='https://'></a>
+                <a class='logo block' href='/index.php'></a>
                 <a href='#'>Найти заказы</a>
                 <a href='#'>Найти фрилансера</a>
               </div>
